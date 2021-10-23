@@ -139,7 +139,7 @@ document.querySelector("#search").addEventListener("click", function () {
             // console.log(data);
             const outputBOMElement = document.querySelector(`#${lang}`);
             results = data
-            res = results.content;
+            res = results.content.body;
             //const chapterBody = results.content.body;
             // Somewhere over here replace("/study/","https://www.churchofjesuschrist.org/study/") so the footnotes actually work
             //outputBOMElement.innerHTML = chapterBody;
