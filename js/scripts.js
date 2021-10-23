@@ -151,7 +151,7 @@ document.querySelector("#search").addEventListener("click", function () {
     }
     
     fetchDataIn("jacob", 1, "eng")
-    
+    fetchDataIn("jacob", 1, "spa")
 });
 
 resetLanguageHTML(selectedLanguage1, selectedLanguage2);
