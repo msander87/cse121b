@@ -121,7 +121,7 @@ document.querySelector("#search").addEventListener("click", function () {
         // Delete the intro after the first search
         document.querySelector(".instructions").innerHTML = ""
     
-        const urlBOM = `https://www.churchofjesuschrist.org/study/api/v3/language-pages/type/content?lang=eng&uri=/scriptures/bofm/jacob/1/1`
+        const urlBOM = `https://www.churchofjesuschrist.org/study/api/v3/language-pages/type/content?lang=${lang}&uri=/scriptures/bofm/${book}/${chapter}/1`
         let results = null;
     
         // Should reset the languages in the HTML, otherwise the chosen order can't be achieved
@@ -150,7 +150,7 @@ document.querySelector("#search").addEventListener("click", function () {
         fetch(urlBOM).then(convertToJson).then(displayScripts);
     }
     
-    fetchDataIn()
+    fetchDataIn("jacob", 1, "eng");
     
 });
 
