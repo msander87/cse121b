@@ -150,7 +150,7 @@ document.querySelector("#search").addEventListener("click", function () {
         fetch(urlBOM).then(convertToJson).then(displayScripts);
     }
     
-    fetchDataIn("jacob", 1, "eng");
+    fetchDataIn("jacob", 1, "eng")
     
 });
 
