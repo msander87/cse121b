@@ -89,20 +89,22 @@ const output = (temples) => {
             let article = document.createElement('article');
 
             let templeName = document.createElement('h3');
-            templeName.textContent = temple.book_title;
+            templeName.textContent = temple.templeName;
 
             let location = document.createElement('h4');
-            location.textContent = temple.chapter_number;
+            location.textContent = temple.location;
 
-            let dedicated = document.createElement('p');
-            dedicated.textContent = temple.scripture_text;
+            let dedicated = document.createElement('h4');
+            dedicated.textContent = temple.dedicated;
 
-            
+            let img = document.createElement('img');
+            img.setAttribute('src', temple.imageUrl);
+            img.setAttribute('alt', temple.templeName);
 
             article.appendChild(templeName);
             article.appendChild(location);
             article.appendChild(dedicated);
-            
+            article.appendChild(img);
 
             document.querySelector('#temples').appendChild(article);
         }
