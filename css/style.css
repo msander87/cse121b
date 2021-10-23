@@ -1,0 +1,104 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+  
+body {
+  background-color: white;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: #444;  
+  max-width: 960px;
+  margin: 0 auto;  
+  box-shadow: 0px 0px 15px;
+  border-radius: 15px;
+}
+
+h1, h2{
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+}
+h1{
+    color: white;    
+    font-size: 1.9rem;
+    padding: 20px 20px 0px 20px;
+}
+h2{
+    color: white; 
+    font-size: 1.3rem;
+    padding: 0px 20px 20px 20px;
+}
+
+
+
+/*header*/
+header{
+  text-align: center;
+  background-color: #002d5f;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  border-radius: 15px 15px 0px 0px;
+}
+
+ 
+
+
+ /*main*/
+
+main{
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.content p{
+    line-height: 80%;
+}
+.content p span{
+    font-weight: bold;
+    color:#002d5f
+}
+.name{
+    font-size: 1.6rem;
+}
+.name span{
+    color: #002d5f;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+ /*footer*/
+ footer{
+    border-radius: 0px 0px 15px 15px; 
+    background-color: #002d5f;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    text-align: center;
+    color: white;
+ }
+ footer p{
+     padding-top: 15px;
+ }
+footer p a{
+    text-decoration: none;
+    color:#77afdb;
+    
+}
+footer p a:hover{
+   
+    color:#e5ae04;
+}
+
+ .updated{
+     margin-top: -20px;
+     font-size: 15px;
+     color:#e5ae04;
+ }
+
+
+
+
+
