@@ -123,7 +123,7 @@ document.querySelector("#search").addEventListener("click", function () {
     
         const urlBOM = `https://www.churchofjesuschrist.org/study/api/v3/language-pages/type/content?lang=${lang}&uri=/scriptures/bofm/${book}/${chapter}/1`
         let results = [];
-    
+        let res = null;
         // Should reset the languages in the HTML, otherwise the chosen order can't be achieved
         resetLanguageHTML(selectedLanguage1, selectedLanguage2);
     
@@ -139,10 +139,11 @@ document.querySelector("#search").addEventListener("click", function () {
             // console.log(data);
             const outputBOMElement = document.querySelector(`#${lang}`);
             results = data
+            res = results.content;
             //const chapterBody = results.content.body;
             // Somewhere over here replace("/study/","https://www.churchofjesuschrist.org/study/") so the footnotes actually work
             //outputBOMElement.innerHTML = chapterBody;
-            alert(results);
+            alert(res);
             // const footer = document.querySelector("footer");
             // footer.innerHTML = "";
         }
