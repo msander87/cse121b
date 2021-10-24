@@ -99,12 +99,10 @@ main{
     border: 1px solid #0098da;
     margin-bottom: 200px;
 }
-#container section{
+.bluesec{
     background-color: #0098da;
 }
-#endText{
-    background-color: #fff; 
-}
+
 #container section h3{
     margin: 0;
     padding: 10px 10px;

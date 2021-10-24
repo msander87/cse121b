@@ -160,7 +160,7 @@ function ckeckInput(){
 
 
 function displayQuestions(){
-    if(turn < 10){
+    if(turn < 3){
         document.querySelector("#score").innerHTML = points;
         document.querySelector("#nq").innerHTML = turn + 1;
         document.querySelector("#verse1").innerHTML = questions[turn].verse1;
