@@ -1,102 +1,186 @@
 /* Fonts from Google Fonts - more at https://fonts.google.com */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Quicksand:wght@500&display=swap');
 
 
-  
+
+img {
+    max-width: 100%;
+}   
 body {
   background-color: white;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-family: 'Nunito Sans', Helvetica, Arial, sans-serif;
   font-size: 18px;
   color: #444;  
-  max-width: 960px;
-  margin: 0 auto;  
-  box-shadow: 0px 0px 15px;
-  border-radius: 15px;
 }
-
-h1, h2{
-  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+.green{
+    font-size: 20px;
+    color: #1FA237;
+    font-weight: bold;
 }
-h1{
-    color: white;    
-    font-size: 1.9rem;
-    padding: 20px 20px 0px 20px;
+.red{
+    font-size: 20px;
+    color: #a2391f;
+    font-weight: bold;
 }
-h2{
-    color: white; 
-    font-size: 1.3rem;
-    padding: 0px 20px 20px 20px;
-}
-
-
-
 /*header*/
 header{
-  text-align: center;
-  background-color: #002d5f;
-  font-family: "Montserrat", Helvetica, Arial, sans-serif;
-  border-radius: 15px 15px 0px 0px;
-}
-
- 
-
-
- /*main*/
-
-main{
+    color: white;
     text-align: center;
-    padding-left: 15px;
-    padding-right: 15px;
+    background-color: #002d5f;
+    font-family: 'Nunito Sans', Helvetica, Arial, sans-serif;
 }
 
-.content p{
-    line-height: 80%;
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Nunito Sans', Helvetica, Arial, sans-serif;
 }
-.content p span{
-    font-weight: bold;
-    color:#002d5f
+h1, h2{
+    text-align: center;
+    margin: 0;
+    padding: 20px 10px;
 }
-.name{
-    font-size: 1.6rem;
+h3{
+    text-align: center;
 }
-.name span{
+.inst{
+    margin-top: -15px;
+}
+.bigWin{
+    background-color: rgba(0, 0, 0, 90%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    
+}
+.smallWin{
+    text-align: center;
+    margin: 0 auto;
+    background-color: #0098da;
+    width: 300px;
+    height: 220px;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    box-shadow: 0px 0px 40px #000;
+    
+}
+.smallWin section{
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+}
+.smallWin section label{
+    margin-top: 10px;
     color: #002d5f;
     font-weight: bold;
 }
+.smallWin section input{
+    margin-top: 10px;
+    border: 2px solid #002d5f;
+}
+.smallWin section button{
+    margin-top: 12px;
+    background-color: #002d5f;
+    color: #fff;
+    border: 2px solid #002d5f;
+    padding: 10px 15px;
+    font-weight: bold;
+}
 
 
 
+main{
+    max-width: 960px;
+    margin: 0 auto;
+}
+#container{
+    border: 1px solid #0098da;
+    margin-bottom: 200px;
+}
+#container section{
+    background-color: #0098da;
+}
+#endText{
+    background-color: #fff;
+}
+#container section h3{
+    margin: 0;
+    padding: 10px 10px;
+    color: #fff;
+}
+#display{
+    text-align: center;
+    padding: 20px 20px;
+}
+#displayEnd{
+    text-align: center;
+    padding: 20px 20px;
+}
+#display label{
+    color: #002d5f;
+    font-weight: bold;
+}
+#display input{
+    margin-top: 10px;
+    border: 2px solid #002d5f;
+}
+#next{
+    margin-top: 12px;
+    background-color: #002d5f;
+    color: #fff;
+    border: 2px solid #0098da;
+    padding: 10px 15px;
+}
+#nextQ{
+    display: none;
+    margin-top: 12px;
+    background-color: #0098da;
+    color: #002d5f;
+    border: 2px solid #0098da;
+    padding: 10px 15px;
+}
+#playAgain{
+    display: none;
+    margin-top: 12px;
+    background-color: #0098da;
+    color: #002d5f;
+    border: 2px solid #0098da;
+    padding: 10px 15px;
+}
+#verse3{
+    margin-bottom: 30px;
+}
 
 
 
 
  /*footer*/
  footer{
-    border-radius: 0px 0px 15px 15px; 
     background-color: #002d5f;
-    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-family: 'Nunito Sans', Helvetica, Arial, sans-serif;
     text-align: center;
     color: white;
  }
  footer p{
      padding-top: 15px;
  }
-footer p a{
+ footer p a{
     text-decoration: none;
-    color:#77afdb;
+    color:#0098da;
     
 }
 footer p a:hover{
    
-    color:#e5ae04;
+    color:#f58634;
 }
 
- .updated{
-     margin-top: -20px;
-     font-size: 15px;
-     color:#e5ae04;
- }
+@media only screen and (min-width: 37.5em) {
+	
+}
+
+
 
 
 
