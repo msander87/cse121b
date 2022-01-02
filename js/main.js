@@ -15,31 +15,98 @@ const btnPlayAgain = document.querySelector("#playAgain");
 const bookNumChapters = 
     [
         { book: "1 Nephi", chapters: 22 },
-        { book: "2 Nephi", chapters: 33 },
-        { book: "Jacob", chapters: 7 },
-        { book: "Enos", chapters: 1 },
-        { book: "Jarom", chapters: 1 },
-        { book: "Omni", chapters: 1 },
-        { book: "Words of Mormon", chapters: 1 },
-        { book: "Mosiah", chapters: 29 },
-        { book: "Alma", chapters: 63 },
-        { book: "Helaman", chapters: 16 },
-        { book: "3 Nephi", chapters: 30 },
-        { book: "4 Nephi", chapters: 1 },
-        { book: "Mormon", chapters: 9 },
-        { book: "Ether", chapters: 15 },
-        { book: "Moroni", chapters: 10 }
+        { book: "2 Nephi", chapters: 55 },
+        { book: "Jacob", chapters: 62 },
+        { book: "Enos", chapters: 63 },
+        { book: "Jarom", chapters: 64 },
+        { book: "Omni", chapters: 65 },
+        { book: "Words of Mormon", chapters: 66 },
+        { book: "Mosiah", chapters: 95 },
+        { book: "Alma", chapters: 158 },
+        { book: "Helaman", chapters: 174 },
+        { book: "3 Nephi", chapters: 204 },
+        { book: "4 Nephi", chapters: 205 },
+        { book: "Mormon", chapters: 214 },
+        { book: "Ether", chapters: 229 },
+        { book: "Moroni", chapters: 239 }
     ]
 
     
     
 function createRamdomItems(array){
+    
+
     for (let i = 0; i < 10; i++) {
-        let randomElement = array[Math.floor(Math.random() * array.length)];
-        let book = randomElement.book;
-        let chapter = randomElement.chapters;
-        let randomChapter = Math.floor(Math.random() * chapter) + 1;
-        let obj = { book: book, chapter: randomChapter }
+        let randomNumber = Math.floor(Math.random() * 239) + 1;
+        let book = '';
+        let chapter = 0;
+        
+        if (randomNumber <= 22){
+            book = '1 Nefi';
+            chapter = Math.floor(Math.random() * 22) + 1;
+        }
+        else if (randomNumber > 22 && randomNumber <=55){
+            book = '2 Nefi';
+            chapter = Math.floor(Math.random() * 33) + 1;
+        }
+        else if (randomNumber > 55 && randomNumber <=62){
+            book = 'Jacob';
+            chapter = Math.floor(Math.random() * 7) + 1;
+        }
+        else if (randomNumber > 62 && randomNumber <=63){
+            book = 'Enos';
+            chapter = 1;
+        }
+        else if (randomNumber > 63 && randomNumber <=64){
+            book = 'Jarom';
+            chapter = 1;
+        }
+        else if (randomNumber > 64 && randomNumber <=65){
+            book = 'Omni';
+            chapter = 1;
+        }
+        else if (randomNumber > 65 && randomNumber <=66){
+            book = 'Palabras de Mormon';
+            chapter = 1;
+        }
+        else if (randomNumber > 66 && randomNumber <=95){
+            book = 'Mosiah';
+            chapter = Math.floor(Math.random() * 29) + 1;
+        }
+        else if (randomNumber > 95 && randomNumber <=158){
+            book = 'Alma';
+            chapter = Math.floor(Math.random() * 63) + 1;
+        }
+        else if (randomNumber > 158 && randomNumber <=174){
+            book = 'Helaman';
+            chapter = Math.floor(Math.random() * 16) + 1;
+        }
+        else if (randomNumber > 174 && randomNumber <=204){
+            book = '3 Nefi';
+            chapter = Math.floor(Math.random() * 30) + 1;
+        }
+        else if (randomNumber > 204 && randomNumber <=205){
+            book = '4 Nefi';
+            chapter = 1;
+        }
+        else if (randomNumber > 205 && randomNumber <=214){
+            book = 'Mormon';
+            chapter = Math.floor(Math.random() * 9) + 1;
+        }
+        else if (randomNumber > 214 && randomNumber <=229){
+            book = 'Eter';
+            chapter = Math.floor(Math.random() * 15) + 1;
+        }
+        else if (randomNumber > 229 && randomNumber <=239){
+            book = 'Moroni';
+            chapter = Math.floor(Math.random() * 10) + 1;
+        }
+
+
+        
+        
+        
+        let obj = { book: book, chapter: chapter }
         if(randomChapters.length === 0){
             randomChapters.push(obj);
         }
