@@ -12,28 +12,10 @@ const btnNextQ = document.querySelector("#nextQ");
 const btnPlayAgain = document.querySelector("#playAgain");
 
 
-const bookNumChapters = 
-    [
-        { book: "1 Nephi", chapters: 22 },
-        { book: "2 Nephi", chapters: 55 },
-        { book: "Jacob", chapters: 62 },
-        { book: "Enos", chapters: 63 },
-        { book: "Jarom", chapters: 64 },
-        { book: "Omni", chapters: 65 },
-        { book: "Words of Mormon", chapters: 66 },
-        { book: "Mosiah", chapters: 95 },
-        { book: "Alma", chapters: 158 },
-        { book: "Helaman", chapters: 174 },
-        { book: "3 Nephi", chapters: 204 },
-        { book: "4 Nephi", chapters: 205 },
-        { book: "Mormon", chapters: 214 },
-        { book: "Ether", chapters: 229 },
-        { book: "Moroni", chapters: 239 }
-    ]
 
     
     
-function createRamdomItems(array){
+function createRamdomItems(){
     
 
     for (let i = 0; i < 10; i++) {
@@ -245,7 +227,7 @@ function displayQuestions(){
 
 
 function startPlaying(){
-    createRamdomItems(bookNumChapters);
+    createRamdomItems();
     createQuestions();
     getName();
     
