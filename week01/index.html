@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD-330 | Portfolio</title>
+    <meta name="description" content="Portfolio to keep track and record of all the weekly activities of the semester">
+
+    
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/medium.css">
+</head>
+<body>
+
+    <header>
+        <h1>Portfolio - Week 1</h1>
+    </header>
+
+    <main>        
+        <h2>Questions</h2>
+        <hr>
+        <ul>
+            <li>Is Localstorage recommended for big projects or real projects?</li>
+            <li>Is it a safe way to save important data?</li>
+            <li>In what form is the data stored and for how long?</li>
+        </ul>
+
+        <h2>Notes</h2>
+        <hr>
+        <ul>
+            <li>Localstorage is one way we can save user input data. This data is stored indefinitely, each data must be saved with a unique variable name, a "Key value" so that we can call it later.</li>
+            <li>These values that we save with LocalStorage are only saved in the browser that the user is using and on their computer, nothing is sent to the server. In other words, they are only used and saved on the client side.</li>       
+            <li>Some examples of errors that I can foresee is that since localstorage uses a single variable, or key value for a certain data, only one person can save data at a time per web page, since if another person enters another data in that variable, this variable will be updated and will have another value, unless each variable that is saved gives the user the option to choose the key value of the data, but in this case it is quite likely that errors will occur, users can choose long key values that later they cannot remember or write exactly the same as they wrote it, of course we can always do something to filter the errors, but that does not change that this It is not an optimal way to store data safely and efficiently. It's not like using a database where each person with a user can come to the computer and have their personal data for each web page.</li>
+        </ul>
+
+        <h2>Exercises</h2>
+        <hr>
+        <ul>
+            <li>Something that seems to be a mistake for me in this exercise is that only the story is shown without the title of the story, I made some small changes so that the title is shown as well.</li>
+            <li>What would happen if the user chooses a very long name? then that user should write the name in exactly the same way, since the name of the history is the key value of the data that is saved. This gives a high probability of error.</li> 
+            <li><a href="exercices/story_editor.html">Story Editor</a></li>     
+        </ul>
+
+    </main>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>WebFont.load({google: {families: ['Lato']}});</script>
+
+</body>
+</html>
