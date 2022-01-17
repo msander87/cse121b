@@ -209,7 +209,7 @@ btnName.addEventListener('click', function() {
 });
 
 function fetchUrl(){
-    fetch('https://msander87.github.io/cse121b/json/bom.json')
+    fetch('https://msander87.github.io/wdd-330-portfolio/JuegoLibroDeMormon/json/bom.json')
         .then(response => response.json())
         .then(scriptures => {
             bom = scriptures;
