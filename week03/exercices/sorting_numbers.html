@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Sorting Numbers</title>
+    <script>
+        function sorting(){
+            let arrayNumbers = [1, 3, 12, 5, 23, 18, 7, 10, 11];
+            let sorted = arrayNumbers.sort();
+            document.querySelector("#sort").innerHTML = arrayNumbers.toString();   
+        }  
+        function sortingCorrectly(){
+            function numerically(a,b){
+            return a-b;
+            }
+            let arrayNumbers = [1, 3, 12, 5, 23, 18, 7, 10, 11];
+            let sorted = arrayNumbers.sort(numerically);
+            document.querySelector("#callback").innerHTML = arrayNumbers.toString();  
+
+
+        }   
+    </script>
+</head>
+
+<body>
+    <h1>Sorting Numbers with Callback</h1>
+    Array to sort = [1,3,12,5,23,18,7,10,11]<br/>
+    Sorted just with sort = <span id="sort"></span><br/>
+    Sorted with Callback = <span id="callback"></span><br/>
+    <button onclick="sorting()">Sort</button><br/>
+    <button onclick="sortingCorrectly()">Sort Correctly</button>
+
+</body>
+
+</html>
