@@ -15,49 +15,43 @@
 <body>
 
     <header>
-        <h1>Portfolio - Week 2</h1>
+        <h1>Portfolio - Week 3</h1>
     </header>
 
     <main>        
         <h2>Questions</h2>
         <hr>
         <ul>
-            <li>Should we use semicolons? What problems can occur if we do not use semicolons?</li>
-            <li>If we declare an array or dictionary with "const" that will be automatically filled by an external factor like an api or something similar, will it work or will it give us an error? Considering that values can change.</li>
-            <li>If we declare a variable with const or let outside the functions, are they considered global variables?</li>
-            <li>What would happen if a user entered a string with an apostrophe? For example, asking for his name, but his name is strange, like from another country, let's say his name is O'hara. And this same name is then placed in a phrase that says, 'Welcome O'hara.' Would it cause an error?</li>
-            <li>Why use double ==? In what case can it be useful?</li>
-            <li>What is the purpose or benefit of using Sets?</li>
-            <li>what is the difference between an array of arrays and a map?</li>
-            <li>If there are ways to declare functions that are not recommended, why do they exist?</li>
-            <li>What are the benefits of using forEach(), reduce(), map() and filter()?</li>
+            <li>What is the difference between a common variable and an object?</li>
+            <li>What is non-strict mode?</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>                       
         
         </ul>
 
         <h2>Notes</h2>
         <hr>
         <ul>
-            <li>Reserved words that will not give me an error but that are good practice not to use: undefined, NaN, Infinity.</li>
-            <li>The main purpose of "const" is not to change a value of a variable that we don't want to be changed.</li>       
-            <li>It is best practice and recommended to name variables that start with a lowercase letter. And that the name describes what that variable or object is going to contain.</li>
-            <li>Variables that start with an underscore, generally refer to private properties and methods, so it's best to not follow this convention for your own variable names.</li>
-            <li>Symbols are the only primitives that don't have a literal form. The only way to create them is to use the Symbol() function</li>
-            <li>In comparisons or conditions it is always better to use "===", since using only two == can cause some problem, since it does not differentiate in the data type.</li>
-            <li>The big difference between an array and a set is that in an array we can store duplicate values, unless you indicate otherwise, while in Set it is not allowed. Because an array is a collection of indices and a Set is a collection of keys.</li>
-            <li>Objects are limited to using strings for key values, whereas maps can use any data type as a key</li>
-            <li>Maps are like dictionaries in other languages like Python</li>
-            <li>When we want a loop to be used directly because we already know that the initial condition is valid to execute the loop, we can use "do while" instead of "while"</li>
-            <li>Don’t Repeat Yourself, or DRY, is a principle of programming that specifies that every part of a program should only be written once. This avoids duplication and means there’s no need to keep multiple pieces of code up to date and in sync.</li>
-            <li>Any parameters a function needs are set when the function is defined. When a function is invoked, it is provided with arguments.</li>
-            <li>Functions declaration are the same as array functions, it is a question of habit or taste. Short functions are best for use in arrow function format since they take up a single line.</li>
+            <li>A function that is a property of an object is called its method.</li>
+            <li>"this" is used to refer to the object we are working with or running right now. If we put the name of the object directly into the function, the function will not be prepared for the change like it is if we use "this". Since this function, in another context, may be is using another object. We make sure that the object used is the one in the function's context, with the "this" keyword.</li>
+            <li>"this" is always used in an object context, since "this" refers to the object of the current context.</li>
+            <li>"this" makes a function more reusable, but it can give more room for error. We must learn how to use it well and intelligently, to make good use of it and not make mistakes.</li>
+            <li></li>
+            <li></li>
+            <li></li>
 
         </ul>
 
         <h2>Exercises</h2>
         <hr>
         <ul>
-            <li><a href="exercices/sorting_numbers.html">Sorting Numbers Correctly</a></li>
-            <li><a href="exercices/quiz.html">Quiz Ninja</a></li>     
+            <li><a href="exercices/this-examle1.html">This exercice example</a></li>
+            <li><a href="exercices/this-calculator-example.html">This calculator example</a></li>    
+            <li>In the "chaining" exercise, return object (return this) is required because every function first needs to have an object, for "this" work correctly.</li> 
+            <li><a href="exercices/chaining-example.html">This chaining example</a></li>  
         </ul>
 
     </main>

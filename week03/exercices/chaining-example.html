@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaining Example Activity</title>
+
+    <script>
+        let ladder = {
+            step: 0,
+            up() {
+                this.step++;
+                return this;
+            },
+            down() {
+                this.step--;
+                return this;
+            },
+            showStep() {
+                alert(this.step);
+                return this;
+            }
+        };
+
+        ladder.up().up().down().showStep().down().down().down().showStep(); // now it should show -2
+    </script>
+
+</head>
+
+<body>
+    <div>Note: check the javascript code to understand.</div>
+</body>
+
+</html>

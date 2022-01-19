@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Calculator Example Activity</title>
+
+    <script>
+        let calculator = {
+            sum() {
+                return this.a + this.b; //with this is reusable
+            },
+
+            mul() {
+                return this.a * this.b; // with this is reusable
+            },
+
+            read() {
+                this.a = +prompt('a?', 0); // asigning the value to a
+                this.b = +prompt('b?', 0); // asigning the value to b
+            }
+        };
+
+        calculator.read(); // first ask to assign value to a and b
+        alert(calculator.sum()); // call the sum function that uses this
+        alert(calculator.mul()); // call the multiplication function that uses this
+    </script>
+
+</head>
+
+<body>
+    <div>Note: check the javascript code to understand.</div>
+</body>
+
+</html>

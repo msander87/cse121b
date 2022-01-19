@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Example Activity</title>
+
+    <script>
+        // wrong example        
+        /*function makeUser() {
+            return {
+                name: "John",
+                ref: this
+            };
+        }
+
+        let user = makeUser();
+
+        alert(user.ref.name);*/
+
+       function makeUser() {
+            return {
+                name: "John",
+                ref() {
+                    return this;
+                }
+            };
+        }
+
+        let user = makeUser();
+        alert(user.ref().name);
+
+        //Now it works, because user.ref() is a method. And the value of this is set to the object before dot
+    </script>
+
+</head>
+
+<body>
+    <div>Note: check the javascript code to understand.</div>
+</body>
+
+</html>
