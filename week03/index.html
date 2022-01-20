@@ -24,11 +24,17 @@
         <ul>
             <li>What is the difference between a common variable and an object?</li>
             <li>What is non-strict mode?</li>
+            <li>Can a property name like the example: 'real name' cause problems? It is best practice not to use spaces, such as: real-name?</li>
+            <li>What is the benefit or possible use of concatenating two strings to form a property name?</li>
+            <li>Is Object.entries() the best way to view the content of an object?</li>
+            <li>Objects are copied by reference to save memory space?</li>
+            <li>If JSON is a string, why doesn't it allow to pass a function in string format so that later the caller can convert it into a method?</li>   
+            <li>How to customize the date format?</li>
+            <li>In regExp, is it better to use the metacharacters or the long expression?</li>
             <li></li>
             <li></li>
+            <li></li>                    
             <li></li>
-            <li></li>
-            <li></li>                       
         
         </ul>
 
@@ -39,9 +45,20 @@
             <li>"this" is used to refer to the object we are working with or running right now. If we put the name of the object directly into the function, the function will not be prepared for the change like it is if we use "this". Since this function, in another context, may be is using another object. We make sure that the object used is the one in the function's context, with the "this" keyword.</li>
             <li>"this" is always used in an object context, since "this" refers to the object of the current context.</li>
             <li>"this" makes a function more reusable, but it can give more room for error. We must learn how to use it well and intelligently, to make good use of it and not make mistakes.</li>
+            <li>An object in JavaScript is a self-contained set of related values and functions. ( If a property’s value is a function, it is known as a method)</li>
+            <li>to invoke a method (a function inside an object), we must call object.method();</li>
+            <li>Objects can contain other objects, these are called nested objects.</li>
+            <li>objects are copied by reference unlike primitive data.</li>
+            <li>To avoid repeating function names, especially in a very long program, we can create the function inside an object, in this way we will reduce the risk of calling a function that we do not want, either because it already exists or because it is inside a library etc By putting the function inside an object, we make the function (method in this case), be used only in the context that we are working on, since we must first call the object (if we call the object we will know in which context we are working and we will not dodge context) and then the method: object.function();</li>
+            <li>JSON is used to share and exchange information. Its format allows it to be read by a person as well.</li>
+            <li>JSON key and values must be double quoted.</li>
+            <li>The Math object can do practically all the mathematical functions, (read its functionalities when I need to do some mathematical calculation in a program).</li>
+            <li>We can interact with the values of an object only using getter and setter.</li>
+            <li>regExp pattern example: pattern = /[Jj][aeiou]v[aeiou]/; It means that the word must have start with a capital or lowercase j, then have a vowel, after the vowel it must have a lowercase v, then it must contain another vowel.</li>
+            <li>Remember that all methods for strings, regEXp, modifiers; They can be very useful for when we are developing programs that have to check user inputs or some other program that has to do with validating inputs, or modifying strings, etc.</li>
             <li></li>
             <li></li>
-            <li></li>
+
 
         </ul>
 
@@ -51,6 +68,7 @@
             <li><a href="exercices/this-examle1.html">This exercice example</a></li>
             <li><a href="exercices/this-calculator-example.html">This calculator example</a></li>    
             <li><a href="exercices/chaining-example.html">This chaining example</a></li>  
+            <li><a href="exercices/quiz.html">Quiz Ninja Improved - ch 5</a></li>  
         </ul>
 
     </main>
