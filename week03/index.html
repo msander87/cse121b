@@ -31,10 +31,12 @@
             <li>If JSON is a string, why doesn't it allow to pass a function in string format so that later the caller can convert it into a method?</li>   
             <li>How to customize the date format?</li>
             <li>In regExp, is it better to use the metacharacters or the long expression?</li>
-            <li></li>
-            <li></li>
-            <li></li>                    
-            <li></li>
+            <li>Is it better to use getElementBy... or querySelector?</li>
+            <li>&lt;li class='hero'&gt;Wonder Woman&lt;/li&gt; const textNode = wonderWoman.firstChild; Is this recommended?</li>
+            <li>What is more recommended? document.createTextNode or textContent?</li>                    
+            <li>heroes.appendChild(aquaman), what is in parentheses is the element text?</li>
+            <li>How events can improve the performance of a website? Or how they can harm a website?</li>
+           
         
         </ul>
 
@@ -56,9 +58,24 @@
             <li>We can interact with the values of an object only using getter and setter.</li>
             <li>regExp pattern example: pattern = /[Jj][aeiou]v[aeiou]/; It means that the word must have start with a capital or lowercase j, then have a vowel, after the vowel it must have a lowercase v, then it must contain another vowel.</li>
             <li>Remember that all methods for strings, regEXp, modifiers; They can be very useful for when we are developing programs that have to check user inputs or some other program that has to do with validating inputs, or modifying strings, etc.</li>
-            <li></li>
-            <li></li>
-
+            <li>The DOM is the tree-like structure of the html document that allows us to access each point of that tree to be able to interact, change, etc.</li>
+            <li>All nodes have a numerical code to signify what type they are. 1 element, 2 attribute, 3 text, 8 comment, 9 body.</li>
+            <li>document.images[0] will return the first image of all the images in the document.</li>
+            <li>Using querySelector we have much more capacity and versatility to point to the DOM node that we want.</li>
+            <li>The methods lastchild, firstchild, etc; they are a bit dangerous to use as they can return empty elements. (This note refers to methods used directly on variables, not methods of querySelector).</li>
+            <li>classList.toggle is for removing the class name that already exists and giving it another name.</li>
+            <li>variable.firstChild = to the text that contains that node, which is called the text node. The text node is quite useful for finding nodes with specific text in the DOM.</li>
+            <li>Dashes are not legal characters in property names (talking about JavaScript). For example, the CSS property background-color becomes backgroundColor</li>
+            <li>Inline event handlers are not recommended. The recommended way of dealing with events is to use event listeners.</li>
+            <li>Parentheses are not written in a function when we are passing that function as a property of an addEventListener, if we put parentheses it would be executed at that moment.</li>
+            <li>You can see a full list on the Events page of the Mozilla Developer Network here: https://developer.mozilla.org/en-US/docs/Web/Events</li>
+            <li>The keydown event is the action of pressing a key, whereas the keypress event is the action of a character being typed on the screen. The keyup event occurs when a key is released.</li>
+            <li>On a touch screen, if a user touches the screen with two fingers, events.touches.length would return 2. The first touch object can be accessed using events.touches[0] and the second using events.touches[1]</li>
+            <li>Touch events are complex and difficult to implement. Many of the properties and methods of Touch events are still marked as being experimental and not widely implemented in browsers.</li>
+            <li>addEventListener() to add events, removeEventListener(). to remove events. When we add an event we cannot name an anonymous function because if we later want to remove that function we will need the name of the function to be able to remove it.</li>
+            <li>Event Propagation is the fact that when you click on an element, you are actually clicking on all the elements it’s nested inside of</li>
+            <li>The addEventListener() method has a third parameter, which is a boolean value that specifies whether capturing should be used or not. It defaults to false. Bubbling happens by default.</li>
+            <li>If we want a function to be executed on several elements, instead of adding an event on each element, we can add the event on the parent element of these elements.</li>
 
         </ul>
 
@@ -69,6 +86,9 @@
             <li><a href="exercices/this-calculator-example.html">This calculator example</a></li>    
             <li><a href="exercices/chaining-example.html">This chaining example</a></li>  
             <li><a href="exercices/quiz.html">Quiz Ninja Improved - ch 5</a></li>  
+            <li><a href="exercices/quiz-ch6.html">Quiz Ninja Improved - ch 6</a></li>  
+            <li><a href="exercices/events.html">Events</a></li>  
+            <li><a href="exercices/quiz-ch7.html">Quiz Ninja Improved - ch 7</a>(the method to hide the button does not work)</li>  
         </ul>
 
     </main>
