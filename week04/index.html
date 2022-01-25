@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD-330 | Portfolio</title>
+    <meta name="description" content="Portfolio to keep track and record of all the weekly activities of the semester">
+
+    
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/medium.css">
+</head>
+<body>
+
+    <header>
+        <h1>Portfolio - Week 4</h1>
+    </header>
+
+    <main>        
+        <h2>Questions</h2>
+        <hr>
+        <ul>
+            <li>Without forms you could not have a user account on facebook, instagram, google, etc? Isn't there another way these famous websites would allow their users to login or register?</li>
+            <li>(document.forms[0];) Is this the best way to identify a form? Isn't it safer for a form to have a unique ID?</li>
+            <li>How are the focus, blur, and change methods useful?</li>
+            <li>Why is it important to validate the data with javascript before sending it to the server?</li>
+            <li>Is it advisable to use the new html attributes, considering that it may not be compatible with some browsers?</li>
+            <li>Is using disabled on a submit button the most recommended way to prevent submitting a form before validating it?</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        
+        </ul>
+
+        <h2>Notes</h2>
+        <hr>
+        <ul>
+            <li>Each form control has an initial value that can be specified in the HTML code.</li>
+            <li>Of the options shown in chapter 8 of the book "JavaScript: Novice to Ninja, 2nd Edition", this is the safest way to call a form element: const input = form['searchInput']</li>
+            <li>input.value is not good, the user when clicking on the input element, the value does not disappear. The placeHolder is much more recommended.</li>
+            <li>The main difference between radiobuttons and check boxes is that in radiobuttons we can only select one, while in check boxes several values can be selected at once.</li>
+            <li>Reset button are not recommended for usability reasons.</li>
+            <li>Client-side validation is more for a good user experience, to help users fill out the form correctly, and to filter requests to the server. It should not be used as the main security filter for the data that is going to be entered to the server, since it is easy to manipulate the Javascript values, that is why there should also always be a good validation on the server side.</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+
+        </ul>
+
+        <h2>Exercises</h2>
+        <hr>
+        <ul>
+            <li><a href="exercices/search.html">Search exercice example</a></li>
+            <li><a href="exercices/hero.html">Form exercice example</a></li>
+            <li><a href="exercices/quiz-ch8.html">Quiz Ninja Chapter 8</a></li>
+            
+        </ul>
+
+    </main>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>WebFont.load({google: {families: ['Lato']}});</script>
+
+</body>
+</html>
