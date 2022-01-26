@@ -28,10 +28,10 @@
             <li>Why is it important to validate the data with javascript before sending it to the server?</li>
             <li>Is it advisable to use the new html attributes, considering that it may not be compatible with some browsers?</li>
             <li>Is using disabled on a submit button the most recommended way to prevent submitting a form before validating it?</li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>After using a constructor to set the properties and methods of an object, can these properties/methods be changed later? or add or remove properties/methods?</li>
+            <li>In which case would it be recommended to use the monkey-patching technique?</li>
+            <li>Why is it important to know and modify the values of a property?</li>
+            <li>There are many different techniques to achieve the same action. If necessary, is it advisable to use all of them? Or should we try to avoid mixing all these techniques and opt for a more consistent and understandable code?</li>
             <li></li>
             <li></li>
             <li></li>
@@ -48,15 +48,28 @@
             <li>The main difference between radiobuttons and check boxes is that in radiobuttons we can only select one, while in check boxes several values can be selected at once.</li>
             <li>Reset button are not recommended for usability reasons.</li>
             <li>Client-side validation is more for a good user experience, to help users fill out the form correctly, and to filter requests to the server. It should not be used as the main security filter for the data that is going to be entered to the server, since it is easy to manipulate the Javascript values, that is why there should also always be a good validation on the server side.</li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-
+            <li>The three main concepts in OOP: encapsulation, polymorphism and inheritance.</li>
+            <li>Encapsulation, it is used to create a code that cannot be modified, and only offer its functionality.</li>
+            <li>Polymorphism is used so that the same method can be used for several objects, being able to make it more specific for each object by overwriting that method, without the need to change everything.</li>
+            <li>Inheritance is used to create objects that already have functionalities and characteristics of other previous objects, being able to add other more specific characteristics.</li>
+            <li>Constructor function is a function that defines the properties and methods of an object.</li>
+            <li>It’s recommended to always use literals to create arrays</li>
+            <li>Static methods can only be called directly by the class and not by objects that are instances of that class.</li>
+            <li>The prototype is used when we want all instances of this prototype to always share the same property values. And when it has to change, it can be changed for everyone.</li>
+            <li>Public methods can be changed simply by assigning a new value to a property of an object. Instead, private methods can only be accessed via getter and setter functions in which we can determine the rules for property changes as we please.</li>
+            <li>The extendes keyword, is to inherit methods and properties to a child class. Then you can add other methods or properties specific to that class.</li>
+            <li>We can add new methods and features to objects that already exist. It can be very helpful depending on the program we are doing. You must call the object.prototype and add the method that you want to apply. Example: Number.prototype.isEven = Number.prototype.isEven = function() {return this%2 === 0;}. This technique is known as monkey-patching.</li>
+            <li>All object properties have the following attributes stored in a property descriptor: value, writable, enumerable, configurable.</li>
+            <li>We can see the descriptor of each property like this: Object.getOwnPropertyDescriptor(object, "property")</li>
+            <li>The get() and set() methods can be used to control how a property is set using assignment and the value that is returned when a property is queried</li>
+            <li>The getter and setter methods give you much more power in controlling the way property assignment works.</li>
+            <li>We can copy an object using the Object.create method: const copyObject =  Object.create(the object we want to copy goes here)</li>
+            <li>We can use mixin() function is to add a large number of properties to an object all at once</li>
+            <li>In using classes, it’s recommended to they don’t have too many properties and methods</li>
+            <li>If we want only one method of a class it is better to borrow than to inherit all the features of that class. Since it can cause a lack of control on our part towards the code.</li>
+            <li>The value of this is not retained inside nested functions, which can cause errors. This can be worked around by using that = this, using the bind(this) method and using arrow functions.</li>
+        
+        
         </ul>
 
         <h2>Exercises</h2>
@@ -65,6 +78,7 @@
             <li><a href="exercices/search.html">Search exercice example</a></li>
             <li><a href="exercices/hero.html">Form exercice example</a></li>
             <li><a href="exercices/quiz-ch8.html">Quiz Ninja Chapter 8</a></li>
+            <li><a href="exercices/quiz-ch12.html">Quiz Ninja Chapter 12</a></li>
             
         </ul>
 
