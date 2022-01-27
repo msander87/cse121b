@@ -1,13 +1,14 @@
-/*const PI = 3.145926;
-export default PI;*/
+export const PI = 3.145926;
+
 
 function square(x) {
     return x * x;
 }
-export default square;
+export {square};
 
 
-/*const stats = {
+
+const stats = {
     square(x) {
         return x * x;
     },
@@ -24,6 +25,6 @@ export default square;
         return this.sum(array, this.square) / array.length - this.square(this.mean(array))
     }
 }
-export default stats;*/
+export {stats};
 
 //module.exports = x => x * x;
