@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD-330 | Portfolio</title>
+    <meta name="description" content="Portfolio to keep track and record of all the weekly activities of the semester">
+
+    
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/medium.css">
+</head>
+<body>
+
+    <header>
+        <h1>Portfolio - Week 5</h1>
+    </header>
+
+    <main>        
+        <h2>Questions</h2>
+        <hr>
+        <ul>
+            <li>Why is it important to debug and test our codes?</li>
+            <li>What are the most common problems that occur when we don't test or debug our code?</li>
+            <li>What are the benefits of knowing what is the error caused in a program? (Exceptions).</li>
+            <li>How much importance should we give to warnings?</li>
+            <li>Are there situations or contexts in which we should let some warnings pass?</li>
+            <li>Should Strict mode be present in all code, modules, libraries, etc?</li>
+            <li>In debugging browser, is it more advisable to use console or debugging keyword?</li>
+            <li>What is the difference between testing and debugging?</li>
+            <li>What is the best Testing Frameworks nowadays?</li>
+            
+        </ul>
+
+        <h2>Notes</h2>
+        <hr>
+        <ul>
+            <li>User errors are programmer errors tambien, because the program should be designed in a way that prevents the user from making the error.</li>
+            <li>An exception is an error that produces a return value that can then be used by the program to deal with the error.</li>
+            <li>A stack trace will work backwards from the point at which the error occurred to identify the original function or method that started the sequence.</li>
+            <li>Failing silently makes bugs hard to detect and hard to track down. The correct thing is that the errors are not silent and can be easily perceived, but not damaging the user experience.</li>
+            <li>It’s much better to spot errors early on, rather than have them cause problems later</li>
+            <li>It is recommended to use "use strict;" since we will have the advantage of knowing all the errors or possible errors while programming.</li>
+            <li>Placing 'use strict' at the beginning of a file will enforce strict mode on all the JavaScript in the file, and may cause errors if we are using third-party code. That is why it is more recommended to place all your code into a self-invoking function.</li>
+            <li>The recommended way to determine browser support for a feature is to use feature detection. This is done using an if statement to check whether an object or method exists before trying to actually call the method.</li>
+            <li>Debugging is the process of finding out where bugs occur in the code and then dealing with them.</li>  
+            <li>An error object can be created to detect errors when we are using objects. It is quite a useful tool, especially if we know all the methods that are applied for specific errors.</li>
+            <li>The "Throw" statement will allow for any problems in your code to be highlighted and dealt with, rather than lurk quietly in the background. It will stop the execution of the program.</li>
+            <li>We can handle errors when we already have a production program, using "try, catch, and finally". This will cause the errors to still be displayed for the developers, but hidden from the user.</li>
+            <li>Test-driven development is considered to be best practice.</li>
+              
+        </ul>
+
+        <h2>Exercises</h2>
+        <hr>
+        <ul>
+            <li><a href="exercices/debugging-browser.html">Debugging Browser</a></li>
+            <li><a href="exercices/Exceptions.html">Exceptions and Testing</a></li>
+            <li><a href="exercices/numberCruncher.test.js">Crunching Numbers (TDD example)</a></li> 
+            <li><a href="exercices/quiz-ninja/index.html">Quiz Ninja ch10 - (using console.log to test)</a></li>            
+        </ul>
+
+    </main>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>WebFont.load({google: {families: ['Lato']}});</script>
+
+</body>
+</html>
