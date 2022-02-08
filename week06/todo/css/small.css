@@ -1,0 +1,123 @@
+a{
+	text-decoration: none;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	color: #3d3d3d;
+	font-size: 2rem;
+	text-align: center;
+	margin: 10px auto 15px auto;
+}
+
+main {
+	font-family: "Roboto Condensed", Arial, sans-serif;
+	margin: 5px auto;
+	padding: 5px;
+	display: grid;
+	grid-template-columns: 1fr;	
+}
+ul {
+	list-style: none;
+}
+.task-list li{
+	margin: 3px 0;
+	padding: 3px;
+	background-color: #f8cd87;
+	display: grid;
+	grid-template-columns: 34px 1fr 24px;
+	align-items: center;
+}
+
+.task-list li .checked{
+	background-color: white;
+	height: 34px;
+}
+.task-list li .checked i{
+	justify-self: start;
+	font-size: 32px;
+	color: #5a3f14;	
+	
+}
+.task-list li p{
+	color: #3d3d3d;
+	justify-self: start;
+	margin: 0 5px;
+	text-decoration: line-through;
+}
+.task-list li .delete-task i{
+	color: #aa7724;
+	margin-top: 4.39px;
+	font-size: 24px;
+	justify-self: end;
+}
+.task-list li .delete-task i:hover{
+	color: #35250c;
+}
+main .counter{
+	font-style: italic;
+	font-size: 14px;
+	color: #5a3f14;
+	margin: 0px 0 5px 5px;
+}
+main section{
+	box-shadow: 0px 0px 6px 2px #555;    
+	position: fixed;
+	background-color: #aa7724 ;
+	left: 0px;
+	right: 0px;
+  	bottom: 0px;
+}
+.info{
+	margin-top: 10px;
+	margin-bottom: 120px;
+	display: grid;
+	grid-template-columns: 1fr 13% 25% 35%;
+	gap: 4px;
+}
+.info p, .info a{
+	text-align: center;
+	font-size: 12px;
+	background-color: #aa7724;
+	color: white;
+	padding: 5px 3px;
+}
+.info p{
+	background-color: #fff;
+	color: #35250c;
+	font-weight: bold;
+}
+.info a:nth-child(2):hover, .info a:nth-child(3):hover, .info a:nth-child(4):hover{
+	background-color: #35250c;
+}
+.new-task-container{
+	padding: 7px 5px 10px 5px;
+	display: grid;
+	grid-template-columns: 1fr 44px;
+	grid-template-rows: 44px;
+	align-items: center;
+	gap: 4px;
+}
+.new-task-container input{
+	height: 44px;
+	border: none;
+}
+.new-task-container a{
+	background-color: #35250c;
+	height: 44px;
+}
+.new-task-container a i{
+	color: #fff;
+	font-size: 40px;
+	margin-top: 2px;
+	margin-left: 2px;
+	align-self: center;
+	justify-self: center;
+}
+.new-task-container a i:hover{
+	color: #f8cd87;
+}
+
