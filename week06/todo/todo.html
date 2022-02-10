@@ -20,33 +20,28 @@
     <main>
         <h1>Todos</h2>
             <div class="tasks-container">
-                <p class="counter">3 tasks left</p>
+                <p class="counter"></p>
                 <ul class="task-list">
-                    <li>
-                        <a class="checked" href="#"><i class="material-icons">done</i></a>
-                        <p>Morning Prayer</p>
-                        <a class="delete-task" href="#"><i class="material-icons">close</i></a>
-                    </li>
+                    
                     
                 </ul>
                 <div class="info">
                     <p>FILTER BY:</p>
-                    <a href="">ALL</a>
-                    <a href="">COMPLETED</a>
-                    <a href="">NOT COMPLETED</a>               
+                    <a href="javascript:void(0);">ALL</a>
+                    <a href="javascript:void(0);">COMPLETED</a>
+                    <a href="javascript:void(0);">NOT COMPLETED</a>               
                 </div>
             </div>
+            <p class="error-message">You must enter a task!</p>
             <section>
                 <div class="new-task-container">
                     <input type="text" id="new-task" name="new-task" placeholder=" Add a new task" required>
-                    <a class="add-task" href="#"><i class="material-icons">add</i></a>
+                    <a class="add-task" href="javascript:void(0);"><i class="material-icons">add</i></a>
                 </div>
             </section>
     </main>
 
-    <script src="js/todos.js"></script>
-    <script src="js/ls.js"></script>
-    <script src="js/utilities.js"></script>
+    <script src="js/toDos.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script>
         WebFont.load({
