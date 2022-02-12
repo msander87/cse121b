@@ -16,46 +16,46 @@ let notCompletedList = [];
 
 toDoList = local_storage.getList();
 if (!toDoList) {
-  toDoList = [];
+    toDoList = [];
 }
 console.log(toDoList);
 utilities.displayList(toDoList);
 
 function createObj(content) {
-  this.id = new Date().getTime();
-  this.content = content;
-  this.completed = false;
+    this.id = new Date().getTime();
+    this.content = content;
+    this.completed = false;
 }
 
 button.addEventListener('click', function () {
-  let task = input.value;
-  if (task === "" || task.trim().length === 0) {
-    input.value = '';
-    error.style.display = "block";
-  } else {
-    input.value = '';
-    error.style.display = "none";
-    let newObj = new createObj(task)
-    toDoList.push(newObj);
-    local_storage.saveList(toDoList);
-    utilities.displayList(toDoList);
+    let task = input.value;
+    if (task === "" || task.trim().length === 0) {
+        input.value = '';
+        error.style.display = "block";
+    } else {
+        input.value = '';
+        error.style.display = "none";
+        let newObj = new createObj(task)
+        toDoList.push(newObj);
+        local_storage.saveList(toDoList);
+        utilities.displayList(toDoList);
 
-  }
+    }
 });
 
 filterAll.addEventListener('click', function () {
-  utilities.displayList(toDoList);
+    utilities.displayList(toDoList);
 });
 
 filterCompleted.addEventListener('click', function () {
-  completedList = toDoList.filter((item) => item.completed);
-  utilities.displayList(completedList);
-  console.log(completedList);
-  document.querySelector('.counter').textContent = 'Completed tasks';
+    completedList = toDoList.filter((item) => item.completed);
+    utilities.displayList(completedList);
+    console.log(completedList);
+    document.querySelector('.counter').textContent = 'Completed tasks';
 });
 
 filterNotCompleted.addEventListener('click', function () {
-  notCompletedList = toDoList.filter((item) => !item.completed);
-  console.log(notCompletedList);
-  utilities.displayList(notCompletedList);
+    notCompletedList = toDoList.filter((item) => !item.completed);
+    console.log(notCompletedList);
+    utilities.displayList(notCompletedList);
 });
