@@ -1,27 +1,27 @@
 
 let links = [
     {
-      label: "Week 01 - Syllabus | Doing Stuff with Web Things",
+      label: "Week 01: Syllabus | Doing Stuff with Web Things",
       url: "week01/index.html"
     },
     {
-      label: "Week 02 - Programming basics | Arrays, Logic, and Loops | Functions",
+      label: "Week 02: Basics | Arrays, Logic, Loops | Functions",
       url: "week02/index.html"
     },
     {
-      label: "Week 03 - This | Objects | DOM | Events",
+      label: "Week 03: This | Objects | DOM | Events",
       url: "week03/index.html"
     },
     {
-      label: "Week 04 - Forms | OOP | Modern JS",
+      label: "Week 04: Forms | OOP | Modern JS",
       url: "week04/index.html"
     },
     {
-      label: "Week 05 - Testing and Debugging",
+      label: "Week 05: Testing and Debugging",
       url: "week05/index.html"
     },
     {
-      label: "Week 06 - Midterm Checkin Exercise (ToDo Application)",
+      label: "Week 06: ToDo Application",
       url: "week06/index.html"
     }
   ]
