@@ -23,6 +23,10 @@ let links = [
     {
       label: "Week 06: ToDo Application",
       url: "week06/index.html"
+    },
+    {
+      label: "Week 07: Further Functions | AJAX",
+      url: "week07/index.html"
     }
   ]
 

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Exceptions</title>
+    <script>
+        function squareRoot(number) {
+            'use strict';
+            if (number < 0) {
+                throw new RangeError('You cannot find the square root of negative numbers ')
+            }
+            
+            return Math.sqrt(number);
+
+        };
+
+        /* function imaginarySquareRoot(number) {
+             'use strict';
+             try {
+                 return String(squareRoot(number));
+             } catch (error) {
+                 return squareRoot(-number) + 'i';
+             }
+         }*/
+
+
+        function imaginarySquareRoot(number) {
+            'use strict';
+            let answer;
+            try {
+                answer = String(squareRoot(number));
+            } catch (error) {
+                answer = squareRoot(-number) + "i";
+            } finally {
+                return `+ or - ${answer}`;
+            }
+        }
+
+        function itSquareRoots4() {
+            return squareRoot(4) === 2;
+        }
+
+
+        //squareRoot(-1);
+        imaginarySquareRoot(-49)
+        itSquareRoots4();
+    </script>
+</head>
+
+<body>
+    <p>See the code to understand</p>
+</body>
+
+</html>
