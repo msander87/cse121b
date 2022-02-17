@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Functions that returns functions</title>
+    <script>
+        function greeter(greeting = 'Hello') {
+            return function () {
+                console.log(greeting);
+            }
+        }
+        const englishGreeter = greeter();
+        englishGreeter();        
+        const frenchGreeter = greeter('Bonjour');
+        frenchGreeter(); 
+        const germanGreeter = greeter('Guten Tag');
+        germanGreeter();
+    </script>
+</head>
+
+<body>
+    <p>See the code to understand</p>
+</body>
+
+</html>

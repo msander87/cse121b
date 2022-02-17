@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Async Function Example</title>
+    <script>
+        async function loadGame(userName) {
+            try {
+                const user = await login(userName);
+                const info = await getPlayerInfo(user.id);
+                // load the game using the returned info
+            } catch (error) {
+                throw error;
+            }
+        }
+        
+    </script>
+</head>
+
+<body>
+    <p>See the code to understand</p>
+</body>
+
+</html>

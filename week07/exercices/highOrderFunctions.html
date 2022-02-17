@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Higher Order Function Examples</title>
+    <script>
+        function power(x) {
+            return function (power) {
+                return Math.pow(x, power);
+            }
+        }
+        twoExp = power(2);        
+        console.log(twoExp(5));
+
+        tenExp = power(10);        
+        console.log(tenExp(6));
+
+        console.log(power(3)(5));
+    </script>
+</head>
+
+<body>
+    <p>See the code to understand</p>
+</body>
+
+</html>

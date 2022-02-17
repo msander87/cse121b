@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Closure Example</title>
+    <script>
+        function closure() {
+            const a = 1.8;
+            const b = 32;
+            return c => c * a + b;
+        }
+
+        const toFahrenheit = closure();
+
+        console.log(toFahrenheit(10));
+
+
+        function counter(start) {
+            let i = start;
+            return function () {
+                return i++;
+            }
+        }
+        const count = counter(1);
+        let startNumber = count();
+        while (startNumber < 50){
+        console.log(count());
+        startNumber ++;
+        }
+    </script>
+</head>
+
+<body>
+    <p>See the code to understand</p>
+</body>
+
+</html>

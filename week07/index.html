@@ -22,14 +22,14 @@
         <h2>Questions</h2>
         <hr>
         <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>In which situation is it more appropriate to use the call() and apply() functions?</li>
+            <li>Is it recommended to use Immediately Invoked Function Expressions? What are its benefits?</li>
+            <li>Should we try to avoid creating a Callback Hell? What problems can happen?</li>
+            <li>What are promises and what are they for?</li>
+            <li>How can a function that returns a function be useful?</li>
+            <li>Can we change the values of variables using inner()?</li>
+            <li>In what kind of programs and contexts would it be useful to use Generator Functions?</li>
+            <li>What does the following sentence mean? Functional programming is a programming paradigm.</li>
             <li></li>
             <li></li>
             <li></li>
@@ -42,6 +42,22 @@
         <h2>Notes</h2>
         <hr>
         <ul>
+            <li>Functions are first-class objects, so they can have properties and methods themselves.</li>
+            <li>We can use the browser cache to save results that take a long time to process and thus avoid wasting time and processing.</li>
+            <li>Temporary variables are declared inside an IFFE and are used to avoid causing a crash while programming the code, since they only exist while the IFFE is being processed.</li>
+            <li>An IFFE is useful when we want a function and its internal variables to be executed only once.</li>
+            <li>Using IFFE is also recommended when we want to use strict mode, by putting strict mode in a function using IFFE we make sure that only this portion is executed that way, avoiding incompatibilities with other codes.</li>
+            <li>IFFE is a useful approach for separating parts of a program into discrete sections, especially for testing purposes.</li>
+            <li>One resource we can take advantage of when we need a function to be initialized in some way, but then changed, is to redefine the function by itself.</li>
+            <li>Init-Time Branching is a technique where we first check some condition such as if an object exists, and if it doesn't exist we change the function with an if and else. This way we can the first time if an object is not yet created use a second option and after the object already exists use the function as we intended it to be used with the object.</li>
+            <li>Callbacks are used to wait for a function to execute when an event occurs, but allow the rest of the code to continue executing while the event does not occur. (event-loop)</li>
+            <li>A callback is a function that is provided as an argument to another function.</li>
+            <li>The use of promises allows us to better organize our code, executing processes that must be fulfilled after others are fulfilled, and allowing the rest of the program to continue executing at the same time.</li>
+            <li>A closure is a reference to a variable that was created inside the scope of another function, but is then kept alive and used in another part of the program.</li>
+            <li>The difference between the yield and the return keywords is that by using yield, the state of the value returned is remembered the next time yield is called.</li>
+            <li>Higher-order functions are functions that accept another function as an argument, or return another function as a result, or both.</li>
+            <li>Functional programming involves breaking processes down into steps that can be applied as a series of functions.</li>
+            <li>A curried function expects that all the parameters are passed in the function, in case some parameter is not passed, the function must have a logic that does a different process to return a value consistent with the function.</li>
             <li></li>
             <li></li>
             <li></li>
@@ -54,15 +70,21 @@
             <li></li>
             <li></li>
             <li></li>
-            <li></li>
-            <li></li>
-              
         </ul>
 
         <h2>Exercises</h2>
         <hr>
         <ul>
-            <li><a href="exercices/debugging-browser.html">Debugging Browser</a></li>
+            <li><a href="exercices/collatzConjecture.html">Recursive Functions</a></li>
+            <li><a href="exercices/callBack.html">Callbacks</a></li>
+            <li><a href="exercices/promises.html">Promises</a></li>
+            <li><a href="exercices/asyncFunctions.html">Async Function</a></li>
+            <li><a href="exercices/generalizedFunctions.html">Generalized Function</a></li>
+            <li><a href="exercices/returningFunctions.html">Functions that Returns other Functions</a></li>
+            <li><a href="exercices/closure.html">Closures</a></li>
+            <li><a href="exercices/generator.html">Generator Functions</a></li>
+            <li><a href="exercices/pureFunctions.html">Functional Programming - Pure Functions</a></li>
+            <li><a href="exercices/highOrderFunctions.html">Higher-order Functions</a></li>
                    
         </ul>
 

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Collatz Conjecture</title>
+    <script>
+        function collatz(n, sequence = [n]) {
+            if (n === 1) {
+                return `Sequence took ${sequence.length} steps. It was ${sequence}`;
+            }
+            if (n % 2 === 0) {
+                n = n / 2;
+            } else {
+                n = 3 * n + 1;
+            }
+            return collatz(n, [...sequence, n]);
+        }
+        console.log(collatz(18));
+    </script>
+</head>
+
+<body>
+    <p>See the code to understand</p>
+</body>
+
+</html>

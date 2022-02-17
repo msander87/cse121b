@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Functional Programing - Pure Functions</title>
+    <script>
+        function square(x) {
+            return x * x;
+        }
+
+        function hypotenuse(a, b) {
+            return Math.sqrt(square(a) + square(b));
+        }
+        console.log(hypotenuse(3, 4));
+
+        function sum(array, callback) {
+            if (callback) {
+                array = array.map(callback);
+            }
+            return array.reduce((a, b) => a + b);
+        }
+        console.log(([1, 2, 3]));
+        console.log(sum([1, 2, 3], square));
+
+        function mean(array) {
+            return sum(array) / array.length;
+        }
+        console.log(mean([1, 2, 3]));
+
+        function variance(array) {
+            return sum(array, square) / array.length - square(mean(array))
+        }
+        console.log(variance([1, 2, 3]));
+    </script>
+</head>
+
+<body>
+    <p>See the code to understand</p>
+</body>
+
+</html>

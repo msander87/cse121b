@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Generalized Function Example</title>
+    <script>
+        function random(a, b, callback) {
+            if (b === undefined) b = a, a = 1; // if only one argument is supplied, assume the lower limit is 1
+            let result = Math.floor((b - a + 1) * Math.random()) + a
+            if (callback) {
+                result = callback(result);
+            }
+            return result;
+        }
+
+        function square(n) {
+            return n * n;
+        }
+
+        console.log(random(1,10,square));
+        console.log(random(1,5, (n) => 2 * n ));//the callback is an anonymous function
+
+    </script>
+</head>
+
+<body>
+    <p>See the code to understand</p>
+</body>
+
+</html>

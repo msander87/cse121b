@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Generator Examples</title>
+    <script>
+        function* fibonacci(a, b) {
+            let [prev, current] = [a, b];
+            while (true) {
+                [prev, current] = [current, prev + current];
+                yield current;
+            }
+        }
+        const sequence = fibonacci(1,1);
+        
+        console.log(sequence.next());
+        console.log(sequence.next());
+        console.log(sequence.next());
+        console.log(sequence.next());
+        console.log(sequence.next());
+        console.log(sequence.next());
+    </script>
+</head>
+
+<body>
+    <p>See the code to understand</p>
+</body>
+
+</html>
