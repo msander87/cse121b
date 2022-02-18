@@ -30,13 +30,15 @@
             <li>Can we change the values of variables using inner()?</li>
             <li>In what kind of programs and contexts would it be useful to use Generator Functions?</li>
             <li>What does the following sentence mean? Functional programming is a programming paradigm.</li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            
+            <li>Ajax dynamically updates web pages without reloading. How can this be useful?</li>
+            <li>What is the difference between Ajax and server-side development?</li>
+            <li>Speaking of Ajax, can Javascript be considered a backend language?</li>
+            <li>Knowing that using JSON is more recommended, are there contexts or situations in which we should use XML?</li>
+            <li>Is it recommended to use redirect method? In what circumstances can it be useful?</li>
+            <li>Is it mandatory to use headers? What can happen if we don't use headers?</li>
+            <li>What is the most suitable library to handle Ajax?</li>
+            <li>What are the disadvantages of using libraries to handle Ajax?</li>
+                        
         </ul>
 
         <h2>Notes</h2>
@@ -58,18 +60,23 @@
             <li>Higher-order functions are functions that accept another function as an argument, or return another function as a result, or both.</li>
             <li>Functional programming involves breaking processes down into steps that can be applied as a series of functions.</li>
             <li>A curried function expects that all the parameters are passed in the function, in case some parameter is not passed, the function must have a logic that does a different process to return a value consistent with the function.</li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>The main difference between client and server is that a client is a machine or a program that requests for services through the web while a server is a machine or a program that provides services to the clients according to the client's requests.</li>
+            <li>To send or receive data, by far the most used in Ajax nowadays it's JSON, which is lighter and easier to parse that XML.</li>
+            <li>Ajax is used to transport data back and forth between sites.</li>
+            <li>Fetch API uses promises to avoid callback hell.</li>
+            <li>The Fetch API provides a global fetch() method that only has one mandatory argument, which is the URL of the resource you wish to fetcht, this method returns a promise that resolves to the response returned from the URL that was provided as an argument.</li>
+            <li>Each response object has an ok property that checks to see if the response is successful</li>
+            <li>Using Ajax we can receive text and file responses, using the text() and blob() methods respectively.</li>
+            <li>JSON is probably the most common format for AJAX responses. We use the json() method to transform the response in JSON format to a javascript object.</li>
+            <li>Object.entries() method is used to view the key and value pairs of an object.</li>
+            <li>You can create your own response objects using a constructor function. These can be useful to use if you are creating an API that needs to send a response.</li>
+            <li>We can get more fine-grained control over the request being made by providing a Request object as an argument. Request objects are created using the Request() constructor.</li>
+            <li>CORS (Cross-Origin Resource Sharing) ia s mechanism that supports secure cross-origin requests and data transfers between browsers and servers. Modern browsers use CORS in APIs to mitigate the risks of cross-origin HTTP requests.</li>
+            <li>We can get more fine-grained control over the request being made by providing a Request object as an argument. Request objects are created using the Request() constructor.</li>
+            <li>HTTP verbs are a set of request methods that HTTP sets to indicate the desired action to be performed for a given resource.</li>
+            <li>The Fetch API includes the FormData interface, which makes it much easier to submit information in forms using Ajax.</li>
+            <li>Ajax is something that is continuously updated, we must be up to date with its new updates to avoid errors, an efficient and simple alternative is to use libraries that take care of ajax requests, which are continuously updated and that way our codes will not remain obsolete.</li>
+            
         </ul>
 
         <h2>Exercises</h2>
@@ -85,6 +92,10 @@
             <li><a href="exercices/generator.html">Generator Functions</a></li>
             <li><a href="exercices/pureFunctions.html">Functional Programming - Pure Functions</a></li>
             <li><a href="exercices/highOrderFunctions.html">Higher-order Functions</a></li>
+            <li><a href="exercices/headers_request_response_examples.js">Fetching, Headers And Request Example</a></li>
+            <li><a href="exercices/ajax/ajax.html">Ajax Examples</a></li>
+            <li><a href="exercices/todo/todo.html">Sending Data Example</a></li>
+            <li><a href="exercices/quiz-ninja/index.html">Quiz Ninja Using Ajax</a></li>
                    
         </ul>
 
