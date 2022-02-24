@@ -27,6 +27,10 @@ let links = [
     {
       label: "Week 07: Further Functions | AJAX",
       url: "week07/index.html"
+    },
+    {
+      label: "Week 08: Transforms and Transitions | Canvas, SVG, and Drag and Drop",
+      url: "week08/index.html"
     }
   ]
 
