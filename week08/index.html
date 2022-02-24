@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD-330 | Portfolio</title>
+    <meta name="description" content="Portfolio to keep track and record of all the weekly activities of the semester">
+
+    
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/medium.css">
+</head>
+<body>
+
+    <header>
+        <h1>Portfolio - Week 8</h1>
+    </header>
+
+    <main>        
+        <h2>Questions</h2>
+        <hr>
+        <ul>
+            <li>Is the use of webkit necessary and recommended? what is it for?</li>
+            <li>What can we use the transform-origin function for?</li>
+            <li>Should we worry about internet explorer 8 and earlier?</li>
+            <li>What problems can occur if we use the all keyword to apply transitions or transformations?</li>
+            <li>When is it recommended to use animations? How many animations is recommended to use on a web page? And what are the elements that are suggested to be animated and which are not?</li>
+            <li>There are still no build in functions to create other shapes with Canvas?</li>
+            <li>Why can it be useful to draw an image that we already have in our html to Canvas?</li>
+            <li>SVG or Canvas? Which one is more recommended to deal with multimedia content?</li>
+            <li>Since there are SVG image editors, is it necessary and recommended to use SVG to create images programmatically speaking?</li>
+            <li>What elements can be dragged?</li>
+            <li>Since drag and drop is not supported on android and some other devices, what alternative do we have to implement this for those devices?</li>            
+            
+        </ul>
+
+        <h2>Notes</h2>
+        <hr>
+        <ul>
+            <li>The CSS3 transform property lets you lets you translate, rotate, scale, and/or skew any element on the page.</li>
+            <li>Translation functions allow you to move elements left, right, up, or down.</li>
+            <li>To move an element only vertically or horizontally you can use translatey or translatex.</li>
+            <li>The scale(x,y) function scales an element by the defined factors horizontally then vertically.</li>
+            <li>If we want to use several transforms functions we must do it in the same declaration, since declaring tranform again would overwrite the first one.</li>
+            <li>The rotate() function rotates an element around the point of origin by a specified angle value.</li>
+            <li>The skew(x,y) function specifies a skew along the x and y axes. As you would expect, the x specifies the skew on the x axis, and the y specifies the skew on the y axis.</li>
+            <li>The order in which we use the transform functions can return different results.</li>
+            <li>Using transitions in css is much simpler, runs faster than using javascript, and allows you to make subtle changes instead of making them abrupt.</li>
+            <li>To create a transition, we must think about what we want to achieve as the final effect and add that property with a origin value, otherwise the transition function will not work.</li>
+            <li>The transition-duration property sets how long the transition will take.</li>            
+            <li>The transition-timing-function allows us to create a much more modern animation, it allows us to give more life to the elements, giving them a more fluid and not so mechanical movement.</li>
+            <li>The transition-delay function will make the transitions not start immediately. It is recommended when we do not want everything to happen immediately, such as an unintentional touch on the screen of a cell phone, with this we make sure that the user does want to touch an element since he presses it with more intention.</li>
+            <li>We can use all 4 transition functions faster by just writing the word transition: and then putting the value for each transition on the same line.</li>
+            <li>Animation is a new feature that allows us to control the entire animation process through keyframes.</li>
+            <li>The animation-name property is used to attach an animation to an element.</li>
+            <li>The animation-duration property defines the length of time (in seconds or milliseconds) an animation takes to complete one iteration.</li>
+            <li>The animation-timing-function is similar to the transition-timing-function property and will make the animation smoother and more subtle.</li>
+            <li>The animation-iteration-count property lets you define how many times the animation will play through.</li>
+            <li>Animation-direction is used to change the orientation in which the animation runs.</li>
+            <li>The animation-fill-mode property defines what happensbefore the first animation iteration begins and after the last animation iteration concludes.</li>
+            <li>The animation-play-state property defines whether the animation is running or paused.</li>
+            <li>Canvas is an API, we can draw shapes and lines, arcs and text, gradients and patterns. It gives us the power to manipulate pixels in images and even video, all this through javascript.</li>
+            <li>All drawing on the canvas happens via the Canvas JavaScript API.</li>
+            <li>With Canvas we can only create rectangles and squares, but we can create other shapes by using paths to create a plane for the lines, arcs and shapes.</li>
+            <li>With more complex shapes, we need to take three steps: layout the path, stroke the path, and fill the path.</li>
+            <li>We can save a copy of the image we created with Canvas using a function that saves the image to a url in jpg or png format.</li>
+            <li>The importance of drawing an image that we already have to Canvas, is that now we can have a canvas object which we can manipulate to our liking with the features of Canvas.</li>
+            <li>The drawOneFrame function manipulates the image that we draw on the Canvas but it does so for each frame, so it is useful for manipulating videos, since they are images that change in each frame.</li>
+            <li>SVG is an image in vector format, while the other images known as jpg or png are bitmaps, therefore SVG images can be enlarged or reduced without losing quality.</li>
+            <li>Canvas does not create content in the DOM, SVG does create content in the DOM and you can interact with it.</li>
+            <li>The Drag and Drop allows to take the interaction with the user to another level more than anything with the smart mobile devices that have a touch screen that results in a very attractive combination.</li>
+            <li>With Drag and Drop we take one element to another "dragging" it from one side to another, being able to exchange data, and perform different tasks.</li>
+            
+
+            
+        </ul>
+
+        <h2>Exercises</h2>
+        <hr>
+        <ul>
+            <li><a href="exercices/transforms_transitions.html">Transforms and Transitions Examples</a></li>
+            <li><a href="exercices/animation.html">Animation Loading Bars</a></li>
+            <li><a href="exercices/animation2.html">Animation Rat Running</a></li>
+            <li><a href="exercices/canvas.html">Canvas Examples</a></li>
+            <li><a href="exercices/svg.html">SVG Examples</a></li>
+            <li><a href="exercices/drag_drop.html">Drag And Drop Example 1</a></li>
+            <li><a href="exercices/drag_drop2.html">Drag And Drop Example 2</a></li>
+            
+                   
+        </ul>
+
+    </main>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>WebFont.load({google: {families: ['Lato']}});</script>
+
+</body>
+</html>

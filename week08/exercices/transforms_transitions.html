@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Transforms and Transitions</title>
+
+
+    <style>
+        .h1:hover span {
+            color: #484848;
+            transform: translateX(40px);
+            font-size: 30px;
+            display: inline-block;
+        }
+
+        .h2:hover span {
+            color: #484848;
+            transform: translateX(20px) scale(2.5);
+            display: inline-block;
+        }
+
+        .h3:hover span {
+            color: #484848;
+            transform: rotate(10deg) translateX(40px) scale(1.5);
+            display: inline-block;
+        }
+
+        .h4:hover {
+            color: #484848;
+            transform: skew(15deg, 4deg);
+            display: inline-block;
+            transition: transform 0.2s ease-out 50ms, color 0.1s linear 50ms;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 class="h1">Translating <span>inline</span> text</h1>
+    <h1 class="h2">Transforming <span>inline</span> text</h1>
+    <h1 class="h3">Rotating <span>inline</span> text</h1>
+    <h1 class="h4">Skewed perespective text (with transitions properties)</h1>
+
+
+
+    <script>
+
+    </script>
+</body>
+
+</html>

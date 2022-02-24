@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Canvas Examples</title>
+
+
+    <style>
+        .myCanvas {
+            border: dotted 2px black;
+        }
+
+        h2 {
+            margin: 20px 0 0 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <canvas id="demo1" class="myCanvas" width="200" height="200">
+        Sorry! Your browser does not support Canvas.
+    </canvas>
+    <canvas id="demo2" class="myCanvas" width="200" height="200">
+        Sorry! Your browser does not support Canvas.
+    </canvas>
+    <canvas id="demo3" class="myCanvas" width="200" height="200">
+        Sorry! Your browser does not support Canvas.
+    </canvas>
+    <canvas id="demo4" class="myCanvas" width="200" height="200">
+        Sorry! Your browser does not support Canvas.
+    </canvas><br /><br />
+    <h2>Demo 5:<br />Saving canvas drawings</h2>
+    <canvas id="demo5" class="myCanvas" width="200" height="200">
+        Sorry! Your browser does not support Canvas.
+    </canvas><br />
+    <button name="saveButton" id="saveButton">Save Drawing</button>
+    <h2>Demo 6: Drawing an image to the canvas</h2>
+    <canvas width="200" height="200" id="demo6" class="myCanvas">
+        Sorry! Your browser doesn't support Canvas.
+    </canvas>
+    <img src="images/html.png" id="myImageElem">
+
+    <h2>Demo 7: Changing image color</h2>
+    <canvas width="200" height="200" id="demo7" class="myCanvas">
+        Sorry! Your browser doesn't support Canvas.
+    </canvas>
+    <img src="images/html.png" id="secondImage">
+
+
+
+
+
+    <script>
+        //demo1
+        function createRectangle() {
+            let canvas = document.querySelector("#demo1");
+            let context = canvas.getContext("2d");
+            context.strokeStyle = "red";
+            context.fillStyle = "rgba(0, 0, 255, 0.5)";
+            context.fillRect(10, 10, 100, 100);
+            context.strokeRect(10, 10, 100, 100);
+        }
+        createRectangle();
+        //demo2
+        function drawPattern() {
+            let canvas = document.querySelector("#demo2");
+            let context = canvas.getContext("2d");
+            context.strokeStyle = "red";
+            let img = new Image();
+            img.src = "images/star.png";
+            img.onload = function () {
+                let pattern = context.createPattern(img, "repeat");
+                context.fillStyle = pattern;
+                context.fillRect(5, 5, 190, 190);
+                context.strokeRect(5, 5, 190, 190);
+            };
+        }
+        drawPattern();
+
+        //demo3
+        function drawGradient() {
+            let canvas = document.querySelector("#demo3");
+            let context = canvas.getContext("2d");
+            context.strokeStyle = "red";
+            let gradient = context.createLinearGradient(0, 0, 0, 200);
+            gradient.addColorStop(0, "blue");
+            gradient.addColorStop(1, "white");
+            context.fillStyle = gradient;
+            context.fillRect(10, 10, 180, 180);
+            context.strokeRect(10, 10, 180, 180);
+        }
+        drawGradient();
+
+        //demo4 creating a circle
+        function drawCircle(canvas) {
+            var context = canvas.getContext("2d");
+            context.beginPath();
+            context.arc(100, 100, 80, 0, Math.PI * 2, false);
+            context.closePath();
+            context.strokeStyle = "red";
+            context.fillStyle = "blue";
+            context.lineWidth = 3;
+            context.fill();
+            context.stroke();
+        }
+        let canvas = document.querySelector('#demo4');
+        drawCircle(canvas);
+
+        //demo5 saving an image
+        let canvas2 = document.querySelector('#demo5');
+        drawCircle(canvas2);
+
+        function saveDrawing() {
+            let canvas5 = document.querySelector("#demo5");
+            window.open(canvas5.toDataURL("image/png"));
+        }
+        const button = document.querySelector("#saveButton");
+        button.addEventListener("click", saveDrawing, false);
+
+
+        //demo6 drawing img in canvas
+        window.addEventListener("load", drawImageToCanvas, false);
+
+        function drawImageToCanvas() {
+            let canvas = document.querySelector("#demo6");
+            let context = canvas.getContext("2d");
+            let image = document.querySelector("#myImageElem");
+            context.drawImage(image, 25, 25);
+            let imageData = context.getImageData(0, 0, 1, 1);
+            let pixelData = imageData.data;
+            console.log(pixelData.length);
+        }
+
+        //demo7 changing image color
+        function manipulateImage() {
+            let canvas = document.querySelector("#demo7");
+            let context = canvas.getContext("2d");
+            let image = document.querySelector("#secondImage");
+            context.drawImage(image, 25, 25);
+            let imageData = context.getImageData(0, 0, 200, 200);
+            let red, green, blue, greyscale;
+            for (let i = 0; i < imageData.data.length; i += 4) {
+                red = imageData.data[i];
+                green = imageData.data[i + 1];
+                blue = imageData.data[i + 2];
+
+                let grayscale = red * 0.3 + green * 0.59 + blue * 0.11;
+                imageData.data[i] = grayscale;
+                imageData.data[i + 1] = grayscale;
+                imageData.data[i + 2] = grayscale;
+
+            }
+            context.putImageData(imageData, 0, 0);
+        }
+        window.addEventListener("load", manipulateImage, false);
+
+        //demo 8 manipulating videos with canvas
+        // just to save the code
+
+        /*function makeVideoOldTimey() {
+            var video = document.getElementById("video");
+            var canvas = document.getElementById("canvasOverlay");
+            var context = canvas.getContext("2d");
+            video.addEventListener("play", function () {
+                draw(video, context, canvas);
+            }, false);
+        }*/
+        /*
+        function draw(video, context, canvas) {
+            if (video.paused || video.ended) return false;
+            drawOneFrame(video, context, canvas);
+            // Start over!
+            setTimeout(function () {
+                draw(video, context, canvas);
+            }, 0);
+        }*/
+
+        /*
+        function drawOneFrame(video, context, canvas) {
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+            try {
+                var imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+                var pixelData = imageData.data;
+                for (var i = 0; i < pixelData.length; i += 4) {
+                    var red = pixelData[i];
+                    var green = pixelData[i + 1];
+                    var blue = pixelData[i + 2];
+                    var grayscale = red * 0.3 + green * 0.59 + blue * 0.11;
+                    pixelData[i] = grayscale;
+                    pixelData[i + 1] = grayscale;
+                    pixelData[i + 2] = grayscale;
+                }
+
+                imageData.data = pixelData;
+                context.putImageData(imageData, 0, 0);
+            } catch (err) {
+                // error handling code will go here
+                // clear the canvas
+                context.clearRect(0, 0, canvas.width, canvas.height);
+                canvas.style.backgroundColor = "transparent";
+                context.fillStyle = "white";
+                context.textAlign = "left";
+                context.font = "18px LeagueGothic, Tahoma, Geneva, sans-serif";
+                context.fillText("There was an error rendering ", 10, 20);
+                context.fillText("the video to the canvas.", 10, 40);
+                context.fillText("Perhaps you are viewing this page from", 10, 70);
+                context.fillText("a file on your computer?", 10, 90);
+                context.fillText("Try viewing this page online instead.", 10, 130);
+                return false;
+            }
+        }*/
+    </script>
+</body>
+
+</html>
