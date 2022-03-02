@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Timing Functions</title>
+
+
+    <style>
+        h3,
+        p {
+            margin: 4px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2>See the code to understand</h2>
+    <div>
+        <h3>setTimeout example:</h3>
+        <p id="p1"></p>
+        <hr>
+        <h3>setTimeout example: (counter to 5)</h3>
+        <p id="p2"></p>
+        <hr>
+
+    </div>
+
+    <script>
+        window.setTimeout(() => document.querySelector("#p1").textContent = "Time's Up!", 3000);
+        let num = 0;
+
+        function counter() {
+            if (num < 5) {
+                num += 1;
+                //console.log(num);
+                document.querySelector("#p2").textContent = num;
+            }
+            else{
+                window.clearInterval(summon);
+            }
+        }
+        const summon = window.setInterval(counter, 1000);
+    </script>
+</body>
+
+</html>
