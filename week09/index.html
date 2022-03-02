@@ -29,12 +29,11 @@
             <li>Can you control login state using local storage?</li>
             <li>What is Javascript's cookie jar? And what is it for?</li>
             <li>When you can make an animation only with css, is it more advisable to use timing functions or only css?</li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>How does using data attributes differ, what is its great benefit?</li>
+            <li>Geolocation is useful for desktop computers? Can this API be used for mobile browsers? Or is it more efficient to use geolocation in other programming languages that can create mobile applications?</li>
+            <li>How compatible are HTML 5 Multimedia tags with current browsers? Is it recommended to use?</li>
+            <li>How do we use the Shims and Polyfills libraries?</li>
+            
         </ul>
 
         <h2>Notes</h2>
@@ -51,8 +50,20 @@
             <li>setTimeout() method can be used to invoke a function after a set amount of time.</li>
             <li>setInterval() method can be used to repeatedly invoke a function.</li>
             <li>requestAnimationFrame() method can be used to produce smooth and animation optimized by utilizing the browser's built-in graphics capabilities.</li>
-            <li></li>
-            <li></li>           
+            <li>A useful site that checks to see if a specific feature can be used is caniuse.com</li>
+            <li>The data- attribute is a way of embedding data in a web page using custom attributes that are ignored by the browser.</li>    
+            <li>Is best practice to use feature detection before using any of the HTML5 API methods.</li>    
+            <li>The Geolocation API is used to obtain the geographical position of the device.</li>    
+            <li>Web workers allow us to do work in the background while the javascript is running. Since javascript only runs one process at a time.</li>    
+            <li>The Service Worker API allows a worker script to run in the background with the added benefit of being able to intercept network requests.</li>    
+            <li>Websocket is a new protocol that allows two-way communication with a server also known as push messaging. This means that a connection is kept open and responses are "pushed" to the client as soon as they are received.</li>    
+            <li>wss:// is the secure protocol used by websockets.</li>   
+            <li>The notification API is a good tool to communicate things to users, since a pop up will appear in some part of the screen, regardless of whether the user is not on our website.</li>
+            <li>HTML5 introduced the audio and video tags used to insert audio and video clips into a web page. It also introduced a Media API for controlling the playback of the clips using JavaScript.</li>
+            <li>All video or audio methods are available when the media file is completely downloaded. So it's appropriate to use the loadedmetadata event, which we can use to fire a function when all the video's metadata has loaded.</li>
+            <li>The canvas element was introduced to allow graphics to be drawn onto a web page in real time using JavaScript</li>
+            <li>To make sure that the browsers used by our users are compatible with the HTML5 APIs that we use, we can use the Shims and Polyfills libraries, which allow us to use the html 5 apis and add the necessary code to make them work in browsers not yet compatible.</li>        
+            
         </ul>
 
         <h2>Exercises</h2>
@@ -62,7 +73,11 @@
             <li><a href="exercices/cookies.html">Cookies Examples</a></li>     
             <li><a href="exercices/timing_functions.html">Timing Functions Examples</a></li>      
             <li><a href="exercices/animation/index.html">Timing Functions Animation Examples</a></li>
-            <li><a href="exercices/quiz-ninja/index.html">Quizz Ninja Week 09 (implementing timing functions)</a></li>      
+            <li><a href="exercices/quiz-ninja/index.html">Quizz Ninja Chapter 09 (implementing timing functions)</a></li>     
+            <li><a href="exercices/factor/index.html">Web Worker Example</a></li> 
+            <li><a href="exercices/websocket/websocket.html">Web Socket Example</a></li>  
+            <li><a href="exercices/quiz-ninja-14/index.html">Quizz Ninja Chapter 14 (usigin localStorage)</a></li>     
+             
         </ul>
 
     </main>
