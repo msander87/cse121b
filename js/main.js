@@ -35,6 +35,10 @@ let links = [
     {
       label: "Week 09: The Window Object | HTML5 APIs",
       url: "week09/index.html"
+    },
+    {
+      label: "Week 10: Validating Forms | Using Fetch",
+      url: "week10/index.html"
     }
   ]
 
