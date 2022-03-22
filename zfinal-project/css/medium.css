@@ -1,0 +1,16 @@
+@media only screen and (min-width: 700px){
+    main{
+        margin: 20px auto;
+        max-width: 800px;
+    }
+    
+    footer img{
+        position: relative;
+        bottom: 190px;        
+    }
+    footer p{
+        margin-top: -185px;        
+    }
+    
+
+}

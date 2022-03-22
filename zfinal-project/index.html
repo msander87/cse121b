@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Character</title>
+    <meta name="description" content="Guess the character, it is a game in which you will have 10 questions to guess 10 characters. Play with your friends or family, and see who gets the highest score!">
+    
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/medium.css">
+</head>
+<body>
+    <header>
+        <h1>GUESS THE CHARACTER</h1>
+    </header>
+
+    <main>        
+        <div class="home-subheader">
+            <button type="button" id="select_user" name="select_user" class="button">INSTRUCTIONS</button>
+            <button type="button" id="select_user" name="select_user" class="button">TOP SCORES</button>
+        </div>
+        <div class="home-container">
+            <h2>CREATE A USERNAME. IF YOU ALREADY HAVE ONE, LOG IN</h2>
+            
+            <form id="login_form">
+                <label>Username</label>
+                <input type="text" maxlength="10" id="username" name="username" required>
+                <label>Password</label>
+                <input type="password" maxlength="6" id="password" name="password" required>
+                <button type="submit" id="select_user" name="select_user" class="button">PLAY</button>
+            </form>
+            
+        </div>
+    </main>
+    
+    <footer>
+        <img src="images/sh.png" alt="superheros footer image">
+        <p>© 2022 | Julio Martin Sander</p>
+    </footer>
+   
+
+    <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>WebFont.load({google: {families: ['Boogaloo', 'Barlow Condensed']}});</script>
+
+</body>
+</html>
