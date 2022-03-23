@@ -1,15 +1,33 @@
-@media only screen and (min-width: 700px){
+@media only screen and (min-width: 520px){
     main{
         margin: 20px auto;
-        max-width: 800px;
+        max-width: 680px;
     }
-    
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 24px;
+    }
+    .home-subheader button{
+         font-size: 22px;       
+    }
+    .home-container form label{
+        font-size: 22px;
+    }
+    .home-container form button{
+        font-size: 24px;
+    }
     footer img{
         position: relative;
-        bottom: 190px;        
+        max-width: 500px;
+        bottom: 0px;
+        right: 0;
+        left: 0;   
+        margin-top: -120px;     
     }
     footer p{
-        margin-top: -185px;        
+        margin-top: 10px;        
     }
     
 
