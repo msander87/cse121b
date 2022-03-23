@@ -42,19 +42,23 @@ main{
     border: 0;
     background-color: #1A3A9B;
     color: #F0A630;
-    padding: 5px;
+    padding: 10px 5px;
     font-family: 'Boogaloo',Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    box-shadow: inset -5px -5px 1px #11255f, inset 4px 3px 1px #3c66e4;
 }
 .home-subheader button:hover{
     background-color: #11255f;
-    box-shadow: 0px 0px 5px #222222;
-    transition: box-shadow 0.5s;
+    box-shadow: inset -4px -4px 4px #0c1b47, inset 3px 3px 4px #0c1b47;
+    transition: box-shadow 0.3s;
     
 }
 .home-container{
     margin: 20px 10px;
     padding: 15px;
     background-color: rgba(255, 255, 255, 0.4);   
+    border-radius: 20px;
+    border: 2px solid #F0A630;
 
 }
 .home-container h2{
@@ -83,10 +87,12 @@ main{
     padding: 5px 15px;
     font-family: 'Boogaloo',Verdana, Geneva, Tahoma, sans-serif;
     font-size: 18px;
+    border-radius: 10px;
+    box-shadow: inset -5px -5px 1px #11255f, inset 4px 3px 1px #3c66e4;
 }
 .home-container form button:hover{
     background-color: #11255f;
-    box-shadow: 0px 0px 5px #222222;
+    box-shadow: inset -4px -4px 4px #0c1b47, inset 3px 3px 4px #0c1b47;
     transition: box-shadow 0.3s;
     
 }
