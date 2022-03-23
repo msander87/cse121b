@@ -22,4 +22,7 @@
         max-width: 490px;
         margin-top: -120px;     
     }
+    footer p{
+        font-size: 14px;        
+    }
 }
