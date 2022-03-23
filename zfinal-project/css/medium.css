@@ -19,16 +19,7 @@
         font-size: 24px;
     }
     footer img{
-        position: relative;
         max-width: 490px;
-        bottom: 0px;
-        right: 0;
-        left: 0;   
         margin-top: -120px;     
     }
-    footer p{
-        margin-top: 10px;        
-    }
-    
-
 }
