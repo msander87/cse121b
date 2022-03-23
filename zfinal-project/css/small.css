@@ -30,6 +30,7 @@ header h1{
 }
 main{
     margin: 10px 5px;
+    min-height: 400px;
 }
 .home-subheader{
     margin: 0 10px;
