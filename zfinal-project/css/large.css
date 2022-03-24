@@ -1,0 +1,23 @@
+@media only screen and (min-width: 1000px){
+    main{
+        margin: 20px auto;
+        max-width: 900px;
+        min-width: 900px;
+    }
+    h1{
+        font-size: 44px;
+    }
+    h2{
+        font-size: 26px;
+    }
+    .home-subheader button{
+         font-size: 24px;       
+    }
+    .home-container form label{
+        font-size: 24px;
+    }
+    .home-container form button{
+        font-size: 28px;
+    }
+    
+}
