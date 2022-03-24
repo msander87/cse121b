@@ -4,13 +4,16 @@
         max-width: 900px;
         min-width: 900px;
     }
+    main p{
+        font-size: 22px;
+    }
     h1{
         font-size: 44px;
     }
     h2{
         font-size: 26px;
     }
-    .home-subheader button{
+    button{
          font-size: 24px;       
     }
     .home-container form label{
@@ -19,5 +22,15 @@
     .home-container form button{
         font-size: 28px;
     }
+    .home-container form input{        
+        min-width: 300px;
+        font-size: 22px;
+    }
+    .error{
+        font-size: 22px;
+    }
+    .home-container ol{
+        font-size: 24px;
+    }   
     
 }

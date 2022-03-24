@@ -11,31 +11,73 @@
     <link rel="stylesheet" href="css/small.css">
     <link rel="stylesheet" href="css/medium.css">
     <link rel="stylesheet" href="css/large.css">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
         <h1>GUESS THE CHARACTER</h1>
     </header>
 
-    <main>        
-        <div class="home-subheader">
-            <button type="button" id="select_user" name="select_user" class="button">INSTRUCTIONS</button>
-            <button type="button" id="select_user" name="select_user" class="button">TOP SCORES</button>
+    <main>
+        <!-- start view subheader -->      
+        <div id="play-subheader" class="play-subheader">
+            <section>MARTIN SANDER</section>
+            <section><p>BEST SCORE:</p><p id="best-score">47</p></section>
+            <section><p>CURRENT SCORE:</p><p id="current-score">33</p></section>
+        </div>  
+        <div id="home-subheader" class="home-subheader">
+            <button type="button" id="instructionsBtn" name="instructionsBtn" class="button">INSTRUCTIONS</button>
+            <button type="button" id="scoresBtn" name="scoresBtn" class="button">TOP SCORES</button>
         </div>
-        <div class="home-container">
+        <!-- start view container -->
+        <div id="login-container" class="home-container">
             <h2>CREATE A USERNAME. IF YOU ALREADY HAVE ONE, LOG IN</h2>
             
             <form id="login_form">
                 <label>Username</label>
-                <input type="text" maxlength="10" id="username" name="username" required>
+                <input type="text" maxlength="15" minlength="5" id="username" name="username" required>
                 <label>Password</label>
-                <input type="password" maxlength="6" id="password" name="password" required>
+                <input type="password" maxlength="15" minlength="5" id="password" name="password" required>
+                <p class="error"></p>
                 <button type="submit" id="select_user" name="select_user" class="button">PLAY</button>
             </form>
             
         </div>
+        <!-- Instructions container -->
+        <div id="instructions-container" class="home-container">
+            <h2>INSTRUCTIONS</h2>            
+            <p>In order to play, you must create a username, this way your score will be saved. The next time you play you can create another username or choose the username you already had by logging in with the username and password you chose when creating your username.<br/><br/>
+                The game round consists of 10 random questions, the questions will always be that you guess a character. For that, you will have some free hints. Each time a character is guessed you earn 10 points, but each time you use additional hints, points will be subtracted according to the hint you chose. If you want to skip that question, just click "skip this question", you will not gain or lose points. If you try to answer and fail, you won't lose points, but the question will be skipped.<br/><br/>                
+                The 10 best scores will be registered with the corresponding username in the "top scores" section. Keep in mind that the maximum score you can get is 100 points, and you can also get negative scores.<br/><br/>                
+                Put your knowledge into practice and have fun!</p>   
+            <section class="btn-section">
+                <button type="button" id="returnBtn" name="returnBtn" class="return-button">RETURN</button>           
+            </section>      
+        </div>
+        <!-- Top scores container -->
+        <div id="scores-container" class="home-container">
+            <h2>TOP SCORES</h2>            
+            <ol>
+                                
+            </ol>   
+            <section class="btn-section">
+                <button type="button" id="returnBtn" name="returnBtn" class="return-button">RETURN</button>           
+            </section>          
+        </div>
+        <!-- playing container -->
+        <div id="scores-container" class="home-container">
+            <div class="num-question"><p id="num-question">10</p></div>
+            <h2>-A----- -------</h2>            
+            <form id="answer_form">
+                <input type="text" id="username" name="username" required>
+                <button type="submit" id="select_user" name="select_user" class="button">ANSWER</button>
+            </form>         
+        </div>
+
+
     </main>
-    
+    <div class="separator"></div>
     <footer>
         <img src="images/sh.png" alt="superheros footer image">
         <p>© 2022 | Julio Martin Sander</p>
