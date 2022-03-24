@@ -180,7 +180,6 @@ button:hover{
 }
 .num-question{
     font-family: 'Boogaloo',Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 18px;
     font-weight: bold;
     color: #11255f;
     font-size: 22px;
@@ -194,6 +193,7 @@ button:hover{
 }
 .num-question p{
     padding-top: 10px;
+    font-size: 18px;
 }
 footer{
     border-top: 4px solid #F0A630;
