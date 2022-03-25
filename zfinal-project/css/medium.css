@@ -24,6 +24,24 @@
         padding: 0 30px;
         font-size: 18px;
     }
+    .playing-section{
+        margin: 10px auto;
+        max-width: 400px;
+    }
+    .playing-section .hintBtn, .playing-section .skipBtn{
+        font-size: 17px;
+    }
+    .hints-container{
+        display: grid;
+    }
+    .hints-container ul{
+        margin-top: 0px;
+    }
+    .hints-container img{
+        justify-self: center;
+        max-width: 480px;
+        margin: 20px 0;
+    }
     footer img{
         max-width: 490px;
         margin-top: -120px;     

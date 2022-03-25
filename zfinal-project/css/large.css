@@ -32,5 +32,48 @@
     .home-container ol{
         font-size: 24px;
     }   
+    #playing-container{
+        display: grid;
+        grid-template-columns: 60% 40%;        
+    }
+    .hints-container{
+        margin: 5px;
+        grid-column: 1/2;  
+        grid-row: 1/4;      
+    }
+    .play-subheader{
+        margin: 5px;
+        grid-column: 2/3;
+        max-width: 100%;
+        
+    }
+    .play-container{
+        margin: 5px;
+        grid-column: 2/3;
+        
+    }
+    .playing-section{
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+    .playing-section .hintBtn, .playing-section .skipBtn{
+        font-size: 19px;
+    }
+
+    .play-subheader section:first-child{        
+        font-size: 22px;        
+    }
+    .play-subheader section:nth-child(2) p:first-child, .play-subheader section:last-child p:first-child{
+        font-size: 19px;
+        
+    }
+    .play-subheader section:nth-child(2) p:last-child, .play-subheader section:last-child p:last-child{
+        font-size: 24px;
+        margin-bottom: 10px;
+        
+    }
+    .play-container .error{
+        font-size: 20px;
+    }
     
 }

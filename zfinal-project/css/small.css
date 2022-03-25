@@ -178,6 +178,135 @@ button:hover{
     margin-bottom: 5px;
     color: #222222;
 }
+.home-container ol{
+    display: table;
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 0;
+    font-family: 'Boogaloo',Verdana, Geneva, Tahoma, sans-serif;
+}
+.home-container ol li{
+    padding-left: 15px;
+    margin-bottom: 5px;
+    color: #222222;
+}
+
+
+
+/*play container*/
+.play-container{
+    margin: 20px 10px;
+    padding: 25px 15px;
+    background-color: rgba(255, 255, 255, 0.4);   
+    border-radius: 20px;
+    border: 2px solid #F0A630;
+
+}
+.play-container h2{
+    margin: 0 0 20px 0;
+    padding: 0 20px;
+    text-align: center;
+    color: #222222;
+}
+.play-container form{
+    text-align: center;
+    margin: 2px auto;
+}
+.play-container form label{
+    display: block;
+    font-family: 'Boogaloo',Verdana, Geneva, Tahoma, sans-serif;
+}
+.play-container form input{
+    display: block;
+    margin: 0 auto 10px auto;
+    text-align: center;
+    border: 2px solid #F0A630;
+    min-width: 200px;
+    font-size: 18px;
+}
+.play-container form button{
+    margin-top: 5px;
+    border: 0;
+    background-color: #1A3A9B;
+    color: #F0A630;
+    padding: 7px 15px;
+    font-family: 'Boogaloo',Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    border-radius: 10px;
+    box-shadow: inset -5px -5px 1px #11255f, inset 4px 3px 1px #3c66e4;
+}
+.play-container form button:hover{
+    background-color: #11255f;
+    box-shadow: inset -4px -4px 4px #0c1b47, inset 3px 3px 4px #0c1b47;
+    transition: box-shadow 0.3s;    
+}
+.play-container hr{
+    border-top: 2px solid #222222;
+    margin-top: 25px;
+    max-width: 450px;
+}
+.play-container .h2-hint{
+    margin: 25px 0 8px 0;
+    
+}
+.playing-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+.playing-section .hintBtn{
+    color: #222222;
+    background-color: #F0A630;
+    box-shadow: inset -5px -5px 1px #ad771f, inset 4px 3px 1px #facd85;
+    padding: 5px 5px;
+}
+.playing-section .skipBtn{
+    color: #F0A630;
+    background-color: #C42020;
+    box-shadow: inset -5px -5px 1px #8b1d1d, inset 4px 3px 1px #eb7171;
+    padding: 5px 5px;
+}
+.playing-section .hintBtn:hover{
+    background-color: #ad771f;
+    box-shadow: inset -3px -3px 3px #4d3715, inset 3px 3px 3px #4d3715;
+}
+.playing-section .skipBtn:hover{
+    background-color: #8b1d1d;
+    box-shadow: inset -3px -3px 3px #571414, inset 3px 3px 3px #571414;
+}
+
+
+
+
+/*Hint container*/
+.hints-container{
+    margin: 20px 10px;
+    padding: 25px 15px;
+    background-color: rgba(255, 255, 255, 0.4);   
+    border-radius: 20px;
+    border: 2px solid #F0A630;
+
+}
+.hints-container h2{
+    margin: 0 0 20px 0;
+    padding: 0 20px;
+    text-align: center;
+    color: #222222;
+}
+.hints-container ul{
+    font-family: 'Barlow Condensed', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding:0 25px;
+}
+
+.hints-container img{
+    width: 100%;
+}
+
+
+
+/*number of question*/
 .num-question{
     font-family: 'Boogaloo',Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
@@ -195,6 +324,11 @@ button:hover{
     padding-top: 10px;
     font-size: 18px;
 }
+
+
+
+
+/*footer*/
 footer{
     border-top: 4px solid #F0A630;
     margin-top: auto;
