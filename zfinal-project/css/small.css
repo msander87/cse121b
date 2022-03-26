@@ -115,6 +115,9 @@ button:hover{
     text-align: center;
     margin: 10px auto;
 }
+.btn-section button{
+    margin: 5px 0;
+}
 .home-container{
     margin: 20px 10px;
     padding: 25px 15px;
@@ -248,7 +251,7 @@ button:hover{
     transition: box-shadow 0.3s;    
 }
 .play-container hr{
-    border-top: 2px solid #222222;
+    border-top: 2px solid #747474;
     margin-top: 25px;
     max-width: 450px;
 }
@@ -311,6 +314,38 @@ button:hover{
     width: 100%;
 }
 
+
+
+/*play container*/
+.result-container{
+    margin: 20px 10px;
+    padding: 25px 15px;
+    background-color: rgba(255, 255, 255, 0.4);   
+    border-radius: 20px;
+    border: 2px solid #F0A630;
+
+}
+.result-container section{
+    text-align: center;
+    margin: 0 0 15px 0;
+}
+.result-container section h2{
+    font-size: 22px;
+    margin: 0 0 8px 0;
+    padding: 0 10px;
+    text-align: center;
+    color: #222222;
+}
+.result-container section h3{
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    padding: 0 10px;
+    text-align: center;
+    color: #222222;
+}
+.result-container img{
+    width: 100%;
+}
 
 
 /*number of question*/

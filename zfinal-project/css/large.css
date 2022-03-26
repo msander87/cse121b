@@ -75,5 +75,9 @@
     .play-container .error{
         font-size: 20px;
     }
+    .result-container{
+        grid-row: 1/4;
+        margin: 5px;
+    }
     
 }

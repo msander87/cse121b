@@ -49,4 +49,10 @@
     footer p{
         font-size: 14px;        
     }
+    .result-container section h2{
+        font-size: 28px;       
+    }
+    .result-container section h3{
+        font-size: 22px;       
+    }
 }

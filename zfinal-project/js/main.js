@@ -1,7 +1,11 @@
 document.querySelector("#login-container").style.display = "none";
 document.querySelector("#instructions-container").style.display = "none";
 document.querySelector("#scores-container").style.display = "none";
-document.querySelector("#home-subheader").style.display = "none";
+//document.querySelector("#home-subheader").style.display = "none";
+document.querySelector("#play-container").style.display = "none";
+document.querySelector(".hints-container").style.display = "none";
+document.querySelector(".result-container").style.display = "none";
+document.querySelector(".play-subheader").style.display = "none";
 
 const baseUrl = "https://www.superheroapi.com/api.php/5220822914617537/";
 
