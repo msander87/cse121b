@@ -18,6 +18,7 @@ header{
     padding: 0;
     text-align: center;
     border-bottom: 4px solid #F0A630;
+    box-shadow: 0px 2px 4px #222222;
 }
 header h1{
     margin: 0;
@@ -51,8 +52,8 @@ main p{
 
 
 .play-subheader{
-    background-color: #F0A630;   
-    margin: 0 auto;
+    background-color: #383838;   
+    margin: 15px auto 0 auto;
     padding: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -61,8 +62,8 @@ main p{
     justify-items: center;
     text-align: center;
     border-radius: 20px;
-    box-shadow: inset -5px -5px 1px #ad771f, inset 4px 3px 1px #facd85;
-    color: #222222;
+    border: 2px solid #222222;
+    color: #fff;
     max-width: 250px;
     
 }
@@ -73,7 +74,7 @@ main p{
     grid-column: 1/3;
     font-size: 18px;
     margin: 5px;
-    border-bottom: 2px solid #222222;
+    border-bottom: 2px solid #F0A630;
     
 }
 .play-subheader section:nth-child(2){
@@ -161,6 +162,12 @@ button:hover{
     transition: box-shadow 0.3s;    
 }
 .error{
+    font-style: italic;
+    color: #C42020;
+    margin: 0;
+    font-size: 16px;
+}
+.error2{
     font-style: italic;
     color: #C42020;
     margin: 0;
