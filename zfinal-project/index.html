@@ -20,20 +20,22 @@
     </header>
 
     <main>
-        <!-- start view subheader -->            
-        <div id="home-subheader" class="home-subheader">
-            <button type="button" id="instructionsBtn" name="instructionsBtn" class="button">INSTRUCTIONS</button>
-            <button type="button" id="scoresBtn" name="scoresBtn" class="button">TOP SCORES</button>
-        </div>
+        <!-- start view subheader -->   
+        <div id="home-buttons">
+            <div id="home-subheader" class="home-subheader">
+                <button type="button" id="instructionsBtn" name="instructionsBtn" class="button">INSTRUCTIONS</button>
+                <button type="button" id="scoresBtn" name="scoresBtn" class="button">TOP SCORES</button>
+            </div>
+        </div>         
         <!-- start view container -->
         <div id="login-container" class="home-container">
             <h2>CREATE A USERNAME. IF YOU ALREADY HAVE ONE, LOG IN</h2>
             
             <form id="login_form">
                 <label>Username</label>
-                <input type="text" maxlength="15" minlength="5" id="username" name="username" required>
+                <input type="text" maxlength="15" id="username">
                 <label>Password</label>
-                <input type="password" maxlength="15" minlength="5" id="password" name="password" required>
+                <input type="password" maxlength="15" id="password">
                 <p class="error"></p>
                 <button type="submit" id="select_user" name="select_user" class="button">PLAY</button>
             </form>
@@ -47,7 +49,7 @@
                 The 10 best scores will be registered with the corresponding username in the "top scores" section. Keep in mind that the maximum score you can get is 100 points, and you can also get negative scores.<br/><br/>                
                 Put your knowledge into practice and have fun!</p>   
             <section class="btn-section">
-                <button type="button" id="returnBtn" name="returnBtn" class="return-button">RETURN</button>           
+                <button type="button" id="returnBtn"  class="return-button">RETURN</button>           
             </section>      
         </div>
 
@@ -58,62 +60,47 @@
                                 
             </ol>   
             <section class="btn-section">
-                <button type="button" id="returnBtn" name="returnBtn" class="return-button">RETURN</button>           
+                <button type="button" id="returnBtn2" class="return-button">RETURN</button>           
             </section>          
         </div>
 
         <!-- playing container -->
         <div id="playing-container">
-
-            <div id="play-subheader" class="play-subheader">
-                <section>MARTIN SANDER</section>
-                <section><p>BEST SCORE:</p><p id="best-score">47</p></section>
-                <section><p>CURRENT SCORE:</p><p id="current-score">33</p></section>
-            </div> 
+            <div id="scoreboard">
+                <div id="play-subheader" class="play-subheader">
+                    <section id="player-name">MARTIN SANDER</section>
+                    <section><p>BEST SCORE:</p><p id="best-score">47</p></section>
+                    <section><p>CURRENT SCORE:</p><p id="current-score">33</p></section>
+                </div> 
+            </div>
 
             <div id="play-container" class="play-container">
                 <div class="num-question"><p id="num-question">1</p></div>
                 
                 <h2 id="hidden-name">MA***** ******** THOR ODINSON</h2>            
                 <form id="answer_form">
-                    <input type="text" id="username" name="username" required placeholder="answer here...">
+                    <input type="text" id="answer" name="answer" required placeholder="answer here...">
                     <p class="error2"></p>
-                    <button type="submit" id="select_user" name="select_user" class="button">ANSWER</button>
+                    <button type="submit" id="answerBtn" class="button">ANSWER</button>
                 </form>
                 <hr>
                 <h2 class="h2-hint">BUY A HINT</h2>
                 <section class="playing-section">
                     <button id="hint-letter" class="hintBtn">LETTER -1pt</button>
                     <button id="hint-relatives" class="hintBtn">RELATIVES -1pt</button>
-                    <button id="hint_group" class="hintBtn">GROUP -2pts</button>
+                    <button id="hint-group" class="hintBtn">GROUP -2pts</button>
                     <button id="hint-real-name" class="hintBtn">REAL NAME -4pts</button>
                     <button id="hint-image" class="hintBtn">PICTURE -4pts</button>
                     <button id="skip-question" class="skipBtn">SKIP</button>
                 </section>
             </div>
-
-            <div class="hints-container">
-                <h2>HINTS</h2>
-                <ul id="hints-ul">
-                    <li>Gender: Male</li>
-                    <li>Race: Asgardian</li>
-                    <li>Place of Birth: Asgard</li>
-                    <li>Height: 198 cm</li>
-                    <li>Weight: 288 kg</li>
-                    <li>Intelligence: 69</li>
-                    <li>Strength: 100</li>
-                    <li>Speed: 83</li>
-                    <li>Durability: 100</li>
-                    <li>Power: 100</li>
-                    <li>Combat: 100</li>
-                    <li>Occupation: King of Asgard; formerly EMS Technician; Physician</li>
-                    <li>Publisher: Marvel</li>
-                    <li>Relatives: Odin (father), Gaea (mother), Frigga (step-mother), Loki (step-brother), Vidar (half-brother), Buri (paternal great-grandfather), Bolthorn (maternal great grandfather), Bor (grandfather), Bestla (grandmother), Vili (uncle), Ve (uncle), Sigyn (former sister-in-law), Hela (alleged niece), Jormungand (alleged nephew), Fernis Wolf (alleged nephew)</li>
-                    <li>Group Affiliation: Avengers</li>
-                    <li>Real Name: Thor Odinson</li>
-                </ul>
-                <img src="https:\/\/www.superherodb.com\/pictures2\/portraits\/10\/100\/140.jpg" alt="character image">
-            </div>  
+            
+            <div id="hints">
+                <div class="hints-container">
+                    <h2>HINTS</h2>
+                    <ul id="hints-ul"></ul>              
+                </div>  
+            </div>
 
             <div class="result-container">
                 <section>
@@ -131,7 +118,7 @@
             <h2>YOUR FINAL SCORE IS 46</h2>            
               
             <section class="btn-section">
-                <button type="button" id="returnBtn"  class="return-button">RETURN</button><br/> 
+                <button type="button" id="returnBtn3"  class="return-button">RETURN</button><br/> 
                 <button type="button" id="restartBtn" class="return-button">PLAY AGAIN</button>      
             </section>          
         </div>
@@ -145,7 +132,8 @@
     </footer>
    
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js" type="module"></script>
+    <script src="js/controller.js" type="module"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script>WebFont.load({google: {families: ['Boogaloo', 'Barlow Condensed']}});</script>
 
