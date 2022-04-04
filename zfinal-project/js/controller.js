@@ -4,19 +4,15 @@ import Buttons from "./buttons.js";
 //views: 0 login | 1 instructions | 2 scores | 3 home_buttons
 //views: 4 playing | 5 hints | 6 result | 7 scoreboard | 8 finished_game
 
-
-
 export default class Controller {
     constructor() {
         this.player = '';
         this.questions = [];
-        this.topScores = '';
+        this.topScore = 0;
         this.currentScore = 0;
         this.round = 0;
         this.character = '';
         this.characterSecret = '';
-        this.isPlaying = true;
-        this.isFinished = false;
         this.buttons = new Buttons();
     }
     async init() {
@@ -29,14 +25,16 @@ export default class Controller {
         this.questions = await getArray();
         console.log(this.questions);
         document.querySelector("#player-name").innerHTML = this.player.toUpperCase();
-        document.querySelector("#best-score").innerHTML = 33;
-        document.querySelector("#current-score").innerHTML = this.currentScore;
+        document.querySelector("#best-score").innerHTML = this.topScore;
+        this.currentScore = 0;
+        this.round = 0;
         this.setRound();
     }
 
     async setRound(){
         /*round*/
-        this.character = this.questions[this.round].name;
+        document.querySelector("#num-question").innerHTML = this.round + 1;
+        this.character = this.questions[this.round].name.toUpperCase();
         /*starter make hints*/        
         let contentHints = `<li>Gender: ${this.questions[this.round].appearance.gender}</li>
         <li>Race: ${this.questions[this.round].appearance.race}</li>
@@ -51,7 +49,8 @@ export default class Controller {
         <li>Combat: ${this.questions[this.round].powerstats.combat}</li>
         <li>Occupation: ${this.questions[this.round].work.ocupation}</li>
         <li>Publisher: ${this.questions[this.round].biography.publisher}</li>`
-        document.querySelector("#hints-ul").innerHTML = contentHints;                
+        document.querySelector("#hints-ul").innerHTML = contentHints;    
+        document.querySelector("#current-score").innerHTML = this.currentScore;            
 
         /*create formatted character*/
         let formatedCharacter = '';
@@ -60,7 +59,7 @@ export default class Controller {
                 formatedCharacter += " ";
             }
             else{
-                formatedCharacter += "*";
+                formatedCharacter += "■";
             }
         }
         this.characterSecret = formatedCharacter;
@@ -73,16 +72,71 @@ export default class Controller {
         document.querySelector("#hint-group").addEventListener("click", addGroup);
         document.querySelector("#hint-real-name").addEventListener("click", addName);
         document.querySelector("#hint-image").addEventListener("click", addImage);
-        document.querySelector("#skip-question").addEventListener("click", skipQuestion);
+
+        document.querySelector("#skip-question").addEventListener("click", nextQuestion);
+        document.querySelector("#answerBtn").addEventListener("click", checkAnswer);
+        document.querySelector("#nextBtn").addEventListener("click", nextQuestion);
+        document.querySelector("#returnBtn3").addEventListener("click", returnMenu);
+        document.querySelector("#restartBtn").addEventListener("click", restart);
         renderViews('475');
     }   
     uptade(){
         document.querySelector("#hidden-name").innerHTML = this.characterSecret;
         document.querySelector("#current-score").innerHTML = this.currentScore;
     }
+    showQuestionResult(){
+
+    }
+    showFinalResult(){
+
+    }
 }
 
 const newInst = new Controller();
+
+function returnMenu(){
+    renderViews("30");
+}
+
+function restart(){
+    newInst.startPlaying();
+}
+
+function checkAnswer(event){
+    event.preventDefault();
+    let value = document.querySelector("#answer").value;
+    let answer = value.trim().toUpperCase();
+    if(answer == ""){
+        document.querySelector(".error2").textContent = "You must write something!"; 
+    }
+    else if(answer == newInst.character){
+        document.querySelector(".error2").textContent = ""; 
+        document.querySelector("#answer").value = "";
+        newInst.currentScore += 10;
+        newInst.uptade();
+        document.querySelector("#result-name").textContent = newInst.character;
+        document.querySelector("#result-status").textContent = "your answer is correct!";
+        let newImg = document.createElement("img");
+        newImg.setAttribute('src', newInst.questions[newInst.round].images.lg);
+        newImg.setAttribute('id', 'image-result');
+        newImg.setAttribute('alt', "character picture");
+        document.querySelector(".result-container").appendChild(newImg);
+        renderViews("6");
+    }
+    else{
+        document.querySelector(".error2").textContent = ""; 
+        document.querySelector("#answer").value = "";
+        document.querySelector("#result-name").textContent = newInst.character;
+        document.querySelector("#result-status").textContent = "your answer is wrong!";
+        let newImg = document.createElement("img");
+        newImg.setAttribute('src', newInst.questions[newInst.round].images.lg);
+        newImg.setAttribute('id', 'image-result');
+        newImg.setAttribute('alt', "character picture");
+        document.querySelector(".result-container").appendChild(newImg);
+        renderViews("6");
+    }
+}
+
 function login(event) {
     event.preventDefault();
     let user = document.querySelector("#username").value;
@@ -104,8 +158,8 @@ function showLetter(){
     console.log(arrayName);
     console.log(arrayName.length - 1);
     console.log(randomPosition);
-    if(arraySecretName.includes("*")){
-        if(arraySecretName[randomPosition] == '*'){
+    if(arraySecretName.includes("■")){
+        if(arraySecretName[randomPosition] == '■'){
             arraySecretName[randomPosition] = arrayName[randomPosition];
             newInst.characterSecret = arraySecretName.join("");
             newInst.currentScore -= 1;
@@ -165,13 +219,32 @@ function addElement(reference){
     }
 }
 
-function skipQuestion(){
-    document.querySelector("#hints-ul").innerHTML = ""; 
-    let image = document.querySelector("#image-hint");
-    if(image){
-        image.remove();
+function nextQuestion(){
+    if(newInst.round<9){
+        document.querySelector("#hints-ul").innerHTML = ""; 
+        let imageHint = document.querySelector("#image-hint");
+        let imageResult = document.querySelector("#image-result");
+        if(imageHint){
+            imageHint.remove();
+        }
+        if(imageResult){
+            imageResult.remove();
+        }
+        newInst.round += 1;
+        newInst.setRound();
     }
-    newInst.round += 1;
-    newInst.setRound();
+    else{
+        document.querySelector("#hints-ul").innerHTML = ""; 
+        let imageHint = document.querySelector("#image-hint");
+        let imageResult = document.querySelector("#image-result");
+        if(imageHint){
+            imageHint.remove();
+        }
+        if(imageResult){
+            imageResult.remove();
+        }
+        document.querySelector("#final-score").innerHTML = newInst.currentScore;
+        renderViews('8');
+    }    
 }
 

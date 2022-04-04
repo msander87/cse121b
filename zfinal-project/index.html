@@ -68,18 +68,18 @@
         <div id="playing-container">
             <div id="scoreboard">
                 <div id="play-subheader" class="play-subheader">
-                    <section id="player-name">MARTIN SANDER</section>
-                    <section><p>BEST SCORE:</p><p id="best-score">47</p></section>
-                    <section><p>CURRENT SCORE:</p><p id="current-score">33</p></section>
+                    <section id="player-name"></section>
+                    <section><p>BEST SCORE:</p><p id="best-score"></p></section>
+                    <section><p>CURRENT SCORE:</p><p id="current-score"></p></section>
                 </div> 
             </div>
 
             <div id="play-container" class="play-container">
                 <div class="num-question"><p id="num-question">1</p></div>
                 
-                <h2 id="hidden-name">MA***** ******** THOR ODINSON</h2>            
+                <h2 id="hidden-name"></h2>            
                 <form id="answer_form">
-                    <input type="text" id="answer" name="answer" required placeholder="answer here...">
+                    <input type="text" id="answer" placeholder="answer here...">
                     <p class="error2"></p>
                     <button type="submit" id="answerBtn" class="button">ANSWER</button>
                 </form>
@@ -104,18 +104,17 @@
 
             <div class="result-container">
                 <section>
-                    <h2 id="result-name">SPIDER-MAN</h2>
-                    <h3>YOUR ANSWER IS CORRECT!</h3>
+                    <h2 id="result-name"></h2>
+                    <h3 id="result-status"></h3>
                     <button id="nextBtn" class="button">NEXT</button>
                 </section>                
-                <img src="https:\/\/www.superherodb.com\/pictures2\/portraits\/10\/100\/140.jpg" alt="character image">
             </div>  
 
         </div>
 
          <!-- final result container -->
          <div id="final-result-container" class="home-container">
-            <h2>YOUR FINAL SCORE IS 46</h2>            
+            <h2>YOUR FINAL SCORE IS <span id="final-score"></span></h2>            
               
             <section class="btn-section">
                 <button type="button" id="returnBtn3"  class="return-button">RETURN</button><br/> 
