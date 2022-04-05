@@ -113,7 +113,6 @@ function checkAnswer(event){
         document.querySelector(".error2").textContent = ""; 
         document.querySelector("#answer").value = "";
         newInst.currentScore += 10;
-        newInst.uptade();
         document.querySelector("#result-name").textContent = newInst.character;
         document.querySelector("#result-status").textContent = "your answer is correct!";
         let newImg = document.createElement("img");
