@@ -1,4 +1,5 @@
 import {getArray} from "./apiManager.js";
+import {setTopScores, getPlayer, updateScore} from "./localStorage.js";
 import {renderViews} from "./views.js";
 import Buttons from "./buttons.js";
 //views: 0 login | 1 instructions | 2 scores | 3 home_buttons
@@ -18,13 +19,20 @@ export default class Controller {
     async init() {
         await renderViews('03');
         await this.buttons.setHomeButtons();
+        let topscores = await setTopScores();
+        let scoresContent = "";
+        topscores.forEach(element => {
+            scoresContent += `<li>${element.user}: ${element.maxScore}</li>`;
+        });
+        document.querySelector("#scores-ol").innerHTML = scoresContent;
+        console.log(topscores);
         document.querySelector("#select_user").addEventListener("click", login);    
     }
     
     async startPlaying(){
         this.questions = await getArray();
         console.log(this.questions);
-        document.querySelector("#player-name").innerHTML = this.player.toUpperCase();
+        document.querySelector("#player-name").innerHTML = this.player;
         document.querySelector("#best-score").innerHTML = this.topScore;
         this.currentScore = 0;
         this.round = 0;
@@ -94,11 +102,18 @@ export default class Controller {
 
 const newInst = new Controller();
 
-function returnMenu(){
+async function returnMenu(){
+    let topscores = await setTopScores();
+        let scoresContent = "";
+        topscores.forEach(element => {
+            scoresContent += `<li>${element.user}: ${element.maxScore}</li>`;
+        });
+        document.querySelector("#scores-ol").innerHTML = scoresContent;
     renderViews("30");
 }
 
 function restart(){
+    newInst.topScore = newInst.currentScore;
     newInst.startPlaying();
 }
 
@@ -136,17 +151,26 @@ function checkAnswer(event){
     }
 }
 
-function login(event) {
+async function login(event) {
     event.preventDefault();
-    let user = document.querySelector("#username").value;
-    let password = document.querySelector("#password").value;
+    let user = document.querySelector("#username").value.trim().toUpperCase();
+    let password = document.querySelector("#password").value.trim();
     if(user.length < 5 || password.length < 5){
         document.querySelector(".error").textContent = "Complete both fields with a minimum of 5 characters!";
     }
     else{
-        document.querySelector(".error").textContent = ""; 
-        newInst.player = user;
-        newInst.startPlaying();
+        let result = await getPlayer(user, password);
+        console.log(result);
+        if(result){
+            document.querySelector("#username").value = "";
+            document.querySelector("#password").value = "";            
+            document.querySelector(".error").textContent = ""; 
+            newInst.player = user;
+            newInst.startPlaying();
+            if(result.maxScore){
+                newInst.topScore = result.maxScore;
+            }
+        }
     }
 }
 
@@ -154,9 +178,6 @@ function showLetter(){
     let arrayName = Array.from(newInst.character);
     let arraySecretName = Array.from(newInst.characterSecret);
     let randomPosition = Math.floor(Math.random() * arraySecretName.length);
-    console.log(arrayName);
-    console.log(arrayName.length - 1);
-    console.log(randomPosition);
     if(arraySecretName.includes("■")){
         if(arraySecretName[randomPosition] == '■'){
             arraySecretName[randomPosition] = arrayName[randomPosition];
@@ -169,12 +190,14 @@ function showLetter(){
         }
     }
 }
+
 function addRelatives(){
     addElement("relatives");
     newInst.currentScore -= 1;
     newInst.uptade();
     document.querySelector("#hint-relatives").removeEventListener("click", addRelatives);  
 }
+
 function addGroup(){
     addElement("group");
     newInst.currentScore -= 2;
@@ -243,6 +266,7 @@ function nextQuestion(){
             imageResult.remove();
         }
         document.querySelector("#final-score").innerHTML = newInst.currentScore;
+        updateScore(newInst.player, newInst.currentScore);
         renderViews('8');
     }    
 }
