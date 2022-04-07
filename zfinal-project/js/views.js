@@ -22,7 +22,7 @@ const viewsArray = [
 
 export default class Views {
 
-    async renderViews(string_with_array_positions) {
+    renderViews(string_with_array_positions) {
         let elements_to_show = Array.from(string_with_array_positions);
         viewsArray.forEach(item => {
             item.style.display = "none";
@@ -33,40 +33,37 @@ export default class Views {
         return true;
     }
 
-    async setHomeButtons() {
+    setHomeButtons() {
         document.querySelector("#instructionsBtn").addEventListener("click", ev => this.renderViews("31"));
         document.querySelector("#scoresBtn").addEventListener("click", ev => this.renderViews("32"));
         document.querySelector("#returnBtn").addEventListener("click", ev => this.renderViews("30"));
         document.querySelector("#returnBtn2").addEventListener("click", ev => this.renderViews("30"));
     }
 
-    async setRoundData(list, round) {
-        document.querySelector("#num-question").innerHTML = round + 1;
-        /*start descriptions*/
-        let contentHints = `Gender: ${list[round].appearance.gender} | 
-        Race: ${list[round].appearance.race} |
-        Place of Birth: ${list[round].biography.placeOfBirth} | 
-        Occupation: ${list[round].work.ocupation} |
-        Publisher: ${list[round].biography.publisher} | 
-        Group: ${list[round].connections.groupAffiliation} | 
-        Relatives: ${list[round].connections.relatives}`
-        document.querySelector("#p-hint").innerHTML = contentHints;
-    }
-
-    addElement(img, imgId, container) {
-        let newImg = document.createElement("img");
-        newImg.setAttribute('src', img);
-        newImg.setAttribute('id', imgId);
-        newImg.setAttribute('alt', "character picture");
-        document.querySelector(container).appendChild(newImg);
-    }
-
-    addText(name) {
-        if (name == "") {
-            document.querySelector("#real-name").textContent = "Real Name: Unknown";
+    setAnswerResult(character, image) {
+        let value = document.querySelector("#answer").value;
+        let answer = value.trim().toUpperCase();
+        if (answer == "") {
+            document.querySelector(".error2").textContent = "You must write something!";
+            return false;
         } else {
-            let pContent = `Real Name: ${name}`;
-            document.querySelector("#real-name").textContent = pContent;
+            document.querySelector(".error2").textContent = "";
+            document.querySelector("#answer").value = "";
+            document.querySelector("#result-name").textContent = character;
+            let newImg = document.createElement("img");
+            newImg.setAttribute('src', image);
+            newImg.setAttribute('id', 'image-result');
+            newImg.setAttribute('alt', "character picture");
+            document.querySelector(".result-container").appendChild(newImg);
+            if (answer == character) {
+                document.querySelector("#result-status").textContent = "CORRECT!";
+                this.renderViews("6");
+                return 10;
+            } else {
+                document.querySelector("#result-status").textContent = `WRONG! your answer was: ${answer}`;
+                this.renderViews("6");
+                return false;
+            }
         }
     }
 

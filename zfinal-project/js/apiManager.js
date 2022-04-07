@@ -1,6 +1,5 @@
 const url = "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json";
-let maxLength = 0;
-
+let characters = [];
 
 function containsDuplicates(array) {
     if (array.length !== new Set(array).size) {
@@ -18,16 +17,14 @@ function createRandomArray(max) {
     }
 }
 
-
 function createArray(anArray) {
-    let numbers = createRandomArray(maxLength);
+    let numbers = createRandomArray(characters.length - 1);
     let newArray = [];
     for (let n in numbers) {
         newArray.push(anArray[numbers[n]]);
     }
-    return newArray;    
+    return newArray;
 }
-
 
 async function fetchJSON() {
     const response = await fetch(url);
@@ -35,10 +32,13 @@ async function fetchJSON() {
     return characters;
 }
 
-
 export async function getArray() {
-    let result = await fetchJSON();
-    maxLength = result.length - 1;
-    let randomArray = createArray(result);
-    return randomArray;
+    if (characters.length <= 0) {
+        characters = await fetchJSON();
+        let randomArray = createArray(characters);
+        return randomArray;
+    } else {
+        let randomArray = createArray(characters);
+        return randomArray;
+    }
 }
