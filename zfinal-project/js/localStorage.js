@@ -6,10 +6,11 @@ async function getList() {
     return playersList;
 }
 
-export async function setTopScores() {
+async function getTopScores() {
     playersList = await getList();
     if (!playersList) {
         playersList = [];
+        return playersList;
     } else {
         let sortedList = playersList.sort((a, b) => b.maxScore - a.maxScore);
         return sortedList;
@@ -69,4 +70,14 @@ export async function updateScore(username, score) {
             saveList(playersList);
         }
     });
+}
+
+export async function setTopScores(){    
+    let topscores = await getTopScores();
+    topscores.length = 15;
+    let scoresContent = "";
+    topscores.forEach(element => {
+        scoresContent += `<li>${element.user}: ${element.maxScore}</li>`;
+    });
+    document.querySelector("#scores-ol").innerHTML = scoresContent;
 }

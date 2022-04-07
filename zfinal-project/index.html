@@ -56,8 +56,7 @@
         <!-- Top scores container -->
         <div id="scores-container" class="home-container">
             <h2>TOP SCORES</h2>            
-            <ol id="scores-ol">
-                                
+            <ol id="scores-ol">                                
             </ol>   
             <section class="btn-section">
                 <button type="button" id="returnBtn2" class="return-button">RETURN</button>           
@@ -87,30 +86,32 @@
                 <h2 class="h2-hint">BUY A HINT</h2>
                 <section class="playing-section">
                     <button id="hint-letter" class="hintBtn">LETTER -1pt</button>
-                    <button id="hint-relatives" class="hintBtn">RELATIVES -1pt</button>
-                    <button id="hint-group" class="hintBtn">GROUP -2pts</button>
-                    <button id="hint-real-name" class="hintBtn">REAL NAME -4pts</button>
-                    <button id="hint-image" class="hintBtn">PICTURE -4pts</button>
+                    <button id="hint-real-name" class="hintBtn">REAL NAME -2pts</button>
+                    <button id="hint-image" class="hintBtn">PICTURE -2pts</button>
                     <button id="skip-question" class="skipBtn">SKIP</button>
                 </section>
             </div>
             
             <div id="hints">
                 <div class="hints-container">
-                    <h2>HINTS</h2>
-                    <ul id="hints-ul"></ul>              
+                    <h2>Description</h2>
+                    <p id="p-hint"></p>
+                    <h2 id="real-name">Real Name: ?</h2>    
+
                 </div>  
             </div>
 
-            <div class="result-container">
-                <section>
-                    <h2 id="result-name"></h2>
-                    <h3 id="result-status"></h3>
-                    <button id="nextBtn" class="button">NEXT</button>
-                </section>                
-            </div>  
+            
 
         </div>
+        <!-- single result contaier -->
+        <div class="result-container">
+            <section>
+                <h2 id="result-name"></h2>
+                <h3 id="result-status"></h3>
+                <button id="nextBtn" class="button">NEXT</button>
+            </section>                
+        </div>  
 
          <!-- final result container -->
          <div id="final-result-container" class="home-container">
