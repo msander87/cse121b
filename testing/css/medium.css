@@ -1,0 +1,58 @@
+@media only screen and (min-width: 520px){
+    main{
+        margin: 20px 10%;        
+    }
+    main p{
+        font-size: 20px;
+    }
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 24px;
+    }
+    button{
+         font-size: 22px;       
+    }
+    .home-container form label{
+        font-size: 22px;
+    }
+    .home-container form button{
+        font-size: 24px;
+    }
+    .error{
+        padding: 0 30px;
+        font-size: 18px;
+    }
+    .playing-section{
+        margin: 10px auto;
+        max-width: 400px;
+    }
+    .playing-section .hintBtn, .playing-section .skipBtn{
+        font-size: 17px;
+    }
+    .hints-container{
+        display: grid;
+    }
+    .hints-container ul{
+        margin-top: 0px;
+    }
+    .hints-container img{
+        justify-self: center;
+        max-width: 480px;
+        margin: 20px 0;
+    }
+    footer img{
+        max-width: 490px;
+        margin-top: -120px;     
+    }
+    footer p{
+        font-size: 14px;        
+    }
+    .result-container section h2{
+        font-size: 28px;       
+    }
+    .result-container section h3{
+        font-size: 22px;       
+    }
+}
