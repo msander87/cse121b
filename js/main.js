@@ -64,3 +64,18 @@ links.forEach(item => {
   document.querySelector('#ol_content').appendChild(li);
 
 });
+
+links2.forEach(item => {
+
+  let li = document.createElement('li');
+  let a = document.createElement('a');
+
+  a.setAttribute('href', item.url);
+  a.setAttribute('target', '_blank');
+  a.textContent = item.label;
+
+  li.appendChild(a);
+
+  document.querySelector('#ol_content2').appendChild(li);
+
+});
