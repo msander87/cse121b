@@ -45,7 +45,7 @@ let links2 = [{
   },
   {
     label: "Final Video",
-    url: "zfinal-project/index.html"
+    url: "https://youtu.be/tYur3x1-1WE"
   }
 ]
 
