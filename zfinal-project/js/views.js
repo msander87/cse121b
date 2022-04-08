@@ -49,19 +49,19 @@ export default class Views {
         } else {
             document.querySelector(".error2").textContent = "";
             document.querySelector("#answer").value = "";
-            document.querySelector("#result-name").textContent = character;
+            document.querySelector("#result-name").innerHTML = character;
             let newImg = document.createElement("img");
             newImg.setAttribute('src', image);
             newImg.setAttribute('id', 'image-result');
             newImg.setAttribute('alt', "character picture");
-            document.querySelector(".result-container").appendChild(newImg);
+            document.querySelector("#result-img").appendChild(newImg);
             if (answer == character) {
-                document.querySelector("#result-status").textContent = "CORRECT!";
-                this.renderViews("6");
+                document.querySelector("#result-status").innerHTML = "CORRECT!";
+                this.renderViews("67");
                 return 10;
             } else {
-                document.querySelector("#result-status").textContent = `WRONG! your answer was: ${answer}`;
-                this.renderViews("6");
+                document.querySelector("#result-status").innerHTML = `WRONG!<br/><span id="wrong-answer">your answer was:<br/>${answer}<span>`;
+                this.renderViews("67");
                 return false;
             }
         }

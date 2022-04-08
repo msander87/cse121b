@@ -1,6 +1,5 @@
 @media only screen and (min-width: 1000px){
     main{
-        margin: 20px auto;
         max-width: 900px;
         min-width: 900px;
     }
@@ -33,33 +32,9 @@
         font-size: 24px;
     }   
     #playing-container{
-        display: grid;
         grid-template-columns: 60% 40%;        
     }
-    #hints{
-        grid-column: 1/2;  
-        grid-row: 1/4; 
-    }
-    .hints-container{
-        margin: 5px;     
-    }
-    #scoreboard{
-        grid-column: 2/3;
-    }
-    .play-subheader{
-        margin: 5px;
-        max-width: 100%;
-        
-    }
-    .play-container{
-        margin: 5px;
-        grid-column: 2/3;
-        
-    }
-    .playing-section{
-        grid-template-columns: 1fr;
-        gap: 5px;
-    }
+    
     .playing-section .hintBtn, .playing-section .skipBtn{
         font-size: 19px;
     }
@@ -76,12 +51,12 @@
         margin-bottom: 10px;
         
     }
-    .play-container .error{
-        font-size: 20px;
+    .result-container section #wrong-answer{
+        font-size: 22px;
     }
-    .result-container{
-        grid-row: 1/4;
-        margin: 5px;
+    .result-container section h3{
+        margin: 0 0 8px 0;
+        font-size: 27px;
     }
     
 }

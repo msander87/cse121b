@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guess the Character</title>
-    <meta name="description" content="Guess the character, it is a game in which you will have 10 questions to guess 10 characters. Play with your friends or family, and see who gets the highest score!">
-    
+    <meta name="description"
+        content="Guess the character, it is a game in which you will have 10 questions to guess 10 characters. Play with your friends or family, and see who gets the highest score!">
+
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/small.css">
     <link rel="stylesheet" href="css/medium.css">
@@ -14,23 +16,24 @@
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
     <header>
         <h1>GUESS THE CHARACTER</h1>
     </header>
 
     <main>
-        <!-- start view subheader -->   
+        <!-- start view subheader -->
         <div id="home-buttons">
             <div id="home-subheader" class="home-subheader">
                 <button type="button" id="instructionsBtn" name="instructionsBtn" class="button">INSTRUCTIONS</button>
                 <button type="button" id="scoresBtn" name="scoresBtn" class="button">TOP SCORES</button>
             </div>
-        </div>         
+        </div>
         <!-- start view container -->
         <div id="login-container" class="home-container">
             <h2>CREATE A USERNAME. IF YOU ALREADY HAVE ONE, LOG IN</h2>
-            
+
             <form id="login_form">
                 <label>Username</label>
                 <input type="text" maxlength="15" id="username">
@@ -39,28 +42,36 @@
                 <p class="error"></p>
                 <button type="submit" id="select_user" name="select_user" class="button">PLAY</button>
             </form>
-            
+
         </div>
         <!-- Instructions container -->
         <div id="instructions-container" class="home-container">
-            <h2>INSTRUCTIONS</h2>            
-            <p>In order to play, you must create a username, this way your score will be saved. The next time you play you can create another username or choose the username you already had by logging in with the username and password you chose when creating your username.<br/><br/>
-                The game round consists of 10 random questions, the questions will always be that you guess a character. For that, you will have some free hints. Each time a character is guessed you earn 10 points, but each time you use additional hints, points will be subtracted according to the hint you chose. If you want to skip that question, just click "skip this question", you will not gain or lose points. If you try to answer and fail, you won't lose points, but the question will be skipped.<br/><br/>                
-                The 10 best scores will be registered with the corresponding username in the "top scores" section. Keep in mind that the maximum score you can get is 100 points, and you can also get negative scores.<br/><br/>                
-                Put your knowledge into practice and have fun!</p>   
+            <h2>INSTRUCTIONS</h2>
+            <p>In order to play, you must create a username, this way your score will be saved. The next time you play
+                you can create another username or choose the username you already had by logging in with the username
+                and password you chose when creating your username.<br /><br />
+                The game round consists of 10 random questions, the questions will always be that you guess a character.
+                For that, you will have some free hints. Each time a character is guessed you earn 10 points, but each
+                time you use additional hints, points will be subtracted according to the hint you chose. If you want to
+                skip that question, just click "skip this question", you will not gain or lose points. If you try to
+                answer and fail, you won't lose points, but the question will be skipped.<br /><br />
+                The 10 best scores will be registered with the corresponding username in the "top scores" section. Keep
+                in mind that the maximum score you can get is 100 points, and you can also get negative
+                scores.<br /><br />
+                Put your knowledge into practice and have fun!</p>
             <section class="btn-section">
-                <button type="button" id="returnBtn"  class="return-button">RETURN</button>           
-            </section>      
+                <button type="button" id="returnBtn" class="return-button">RETURN</button>
+            </section>
         </div>
 
         <!-- Top scores container -->
         <div id="scores-container" class="home-container">
-            <h2>TOP SCORES</h2>            
-            <ol id="scores-ol">                                
-            </ol>   
+            <h2>TOP SCORES</h2>
+            <ol id="scores-ol">
+            </ol>
             <section class="btn-section">
-                <button type="button" id="returnBtn2" class="return-button">RETURN</button>           
-            </section>          
+                <button type="button" id="returnBtn2" class="return-button">RETURN</button>
+            </section>
         </div>
 
         <!-- playing container -->
@@ -68,15 +79,23 @@
             <div id="scoreboard">
                 <div id="play-subheader" class="play-subheader">
                     <section id="player-name"></section>
-                    <section><p>BEST SCORE:</p><p id="best-score"></p></section>
-                    <section><p>CURRENT SCORE:</p><p id="current-score"></p></section>
-                </div> 
+                    <section>
+                        <p>BEST SCORE:</p>
+                        <p id="best-score"></p>
+                    </section>
+                    <section>
+                        <p>CURRENT SCORE:</p>
+                        <p id="current-score"></p>
+                    </section>
+                </div>
             </div>
 
             <div id="play-container" class="play-container">
-                <div class="num-question"><p id="num-question">1</p></div>
-                
-                <h2 id="hidden-name"></h2>            
+                <div class="num-question">
+                    <p id="num-question">1</p>
+                </div>
+
+                <h2 id="hidden-name"></h2>
                 <form id="answer_form">
                     <input type="text" id="answer" placeholder="answer here...">
                     <p class="error2"></p>
@@ -91,35 +110,38 @@
                     <button id="skip-question" class="skipBtn">SKIP</button>
                 </section>
             </div>
-            
+
             <div id="hints">
                 <div class="hints-container">
-                    <h2>Description</h2>
+                    <h2>HINTS</h2>
                     <p id="p-hint"></p>
-                    <h2 id="real-name">Real Name: ?</h2>
-                </div>  
+                    <h2 id="real-name"></h2>
+                </div>
             </div>
 
-            
+            <!-- single result contaier -->
+            <div class="result-container">
+                <section>                    
+                    <h3 id="result-status"></h3>
+                    <button id="nextBtn" class="button">NEXT</button>
+                    <section id="result-img">
+
+                    </section>
+                    <section id="result-name"></section>
+                </section>
+            </div>
 
         </div>
-        <!-- single result contaier -->
-        <div class="result-container">
-            <section>
-                <h2 id="result-name"></h2>
-                <h3 id="result-status"></h3>
-                <button id="nextBtn" class="button">NEXT</button>
-            </section>                
-        </div>  
 
-         <!-- final result container -->
-         <div id="final-result-container" class="home-container">
-            <h2>YOUR FINAL SCORE IS <span id="final-score"></span></h2>            
-              
+
+        <!-- final result container -->
+        <div id="final-result-container" class="home-container">
+            <h2>YOUR FINAL SCORE IS <span id="final-score"></span></h2>
+
             <section class="btn-section">
-                <button type="button" id="returnBtn3"  class="return-button">RETURN</button><br/> 
-                <button type="button" id="restartBtn" class="return-button">PLAY AGAIN</button>      
-            </section>          
+                <button type="button" id="returnBtn3" class="return-button">RETURN</button><br />
+                <button type="button" id="restartBtn" class="return-button">PLAY AGAIN</button>
+            </section>
         </div>
 
 
@@ -127,13 +149,21 @@
     <div class="separator"></div>
     <footer>
         <img src="images/sh.png" alt="superheros footer image">
-        <p>© 2022 | Julio Martin Sander</p>
+        <p>© 2022 | Julio Martin Sander<br />
+            data provided by SuperHeroApi.com</p>
     </footer>
-   
+
 
     <script src="js/main.js" type="module"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-    <script>WebFont.load({google: {families: ['Boogaloo', 'Barlow Condensed']}});</script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Boogaloo', 'Barlow Condensed']
+            }
+        });
+    </script>
 
 </body>
+
 </html>

@@ -61,6 +61,7 @@ export default class Controller {
         let result = this.views.setAnswerResult(this.character, this.questions[this.round].images.lg);
         if (result){
             this.currentScore += result;
+            this.uptade();
         } 
     }
     showLetter(){
@@ -81,7 +82,7 @@ export default class Controller {
     }
     addImage(){
         if(!this.hintImageClicked){
-            this.utilities.addElement(this.questions[this.round].images.lg, "image-hint", ".hints-container");
+            this.utilities.addElement(this.questions[this.round].images.lg);
             this.currentScore -= 2;
             this.uptade();
             this.hintImageClicked = true;
@@ -104,7 +105,8 @@ export default class Controller {
                 this.topScore = this.currentScore;
             }
             this.views.renderViews('8');
-        }    
+        }
+        document.querySelector("header").scrollIntoView({block: "start", behavior: "smooth"});   
     }
     restart(){
         this.startPlaying();

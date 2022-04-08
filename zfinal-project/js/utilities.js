@@ -3,13 +3,13 @@ export default class Utilities {
     setRoundData(list, round) {
         document.querySelector("#num-question").innerHTML = round + 1;
         /*start descriptions*/
-        let contentHints = `Gender: ${list[round].appearance.gender} | 
-        Race: ${list[round].appearance.race} |
-        Place of Birth: ${list[round].biography.placeOfBirth} | 
-        Occupation: ${list[round].work.ocupation} |
-        Publisher: ${list[round].biography.publisher} | 
-        Group: ${list[round].connections.groupAffiliation} | 
-        Relatives: ${list[round].connections.relatives}`
+        let contentHints = `<strong>Gender:</strong> ${list[round].appearance.gender}<br/>
+        <strong>Race:</strong> ${list[round].appearance.race}<br/>
+        <strong>Place of Birth:</strong> ${list[round].biography.placeOfBirth}<br/>
+        <strong>Occupation:</strong> ${list[round].work.ocupation}<br/>
+        <strong>Publisher:</strong> ${list[round].biography.publisher}<br/> 
+        <strong>Group:</strong> ${list[round].connections.groupAffiliation}<br/> 
+        <strong>Relatives:</strong> ${list[round].connections.relatives}`
         document.querySelector("#p-hint").innerHTML = contentHints;
     }
 
@@ -45,7 +45,7 @@ export default class Utilities {
     }
 
     cleanRound() {
-        document.querySelector("#real-name").innerHTML = "Real Name: ?";
+        document.querySelector("#real-name").innerHTML = "";
         let imageHint = document.querySelector("#image-hint");
         let imageResult = document.querySelector("#image-result");
         if (imageHint) {
@@ -56,12 +56,17 @@ export default class Utilities {
         }
     }
 
-    addElement(img, imgId, container) {
+    addElement(img) {
         let newImg = document.createElement("img");
         newImg.setAttribute('src', img);
-        newImg.setAttribute('id', imgId);
+        newImg.setAttribute('id', "image-hint");
         newImg.setAttribute('alt', "character picture");
-        document.querySelector(container).appendChild(newImg);
+        document.querySelector(".hints-container").appendChild(newImg);
+        let image = document.querySelector("#image-hint");
+        image.onload = function() {
+            image.scrollIntoView({block: "center", behavior: "smooth"});
+        };
+        //document.querySelector("#image-hint").scrollIntoView({block: "start", behavior: "smooth"});
     }
 
     addText(name) {
@@ -71,6 +76,7 @@ export default class Utilities {
             let pContent = `Real Name: ${name}`;
             document.querySelector("#real-name").textContent = pContent;
         }
+        document.querySelector("#real-name").scrollIntoView({block: "center", behavior: "smooth"});
     }
 
 }
