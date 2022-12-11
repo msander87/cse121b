@@ -69,7 +69,8 @@ function resetAll(){
     document.querySelector("#div9 p").textContent = "";
     document.querySelector('.error').style.display = "none";
     document.querySelector(".win").style.display = "none";
-    
+    document.querySelector(".res").style.display = "none";
+
     document.querySelector('#div1 p').style.color = "black";
     document.querySelector('#div2 p').style.color = "black";
     document.querySelector('#div3 p').style.color = "black";
@@ -108,6 +109,7 @@ function isFinished(){
     if(b1 == b2 && b1 == b3 && b1 !=""){
         document.querySelector(".win").textContent = "'"+ b1 +"' wins!";
         document.querySelector(".win").style.display = "block";
+        document.querySelector(".res").style.display = "block";
         p1.style.color = "#f08080";
         p2.style.color = "#f08080";
         p3.style.color = "#f08080";
@@ -115,6 +117,7 @@ function isFinished(){
     else if(b1 == b5 && b1 == b9 && b1 !=""){
         document.querySelector(".win").textContent = "'"+ b1 +"' wins!";
         document.querySelector(".win").style.display = "block";
+        document.querySelector(".res").style.display = "block";
         p1.style.color = "#f08080";
         p5.style.color = "#f08080";
         p9.style.color = "#f08080";
@@ -122,6 +125,7 @@ function isFinished(){
     else if(b1 == b4 && b1 == b7 && b1 !=""){
         document.querySelector(".win").textContent = "'"+ b1 +"' wins!";
         document.querySelector(".win").style.display = "block";
+        document.querySelector(".res").style.display = "block";
         p1.style.color = "#f08080";
         p4.style.color = "#f08080";
         p7.style.color = "#f08080";
@@ -129,6 +133,7 @@ function isFinished(){
     else if(b2 == b5 && b2 == b8 && b2 !=""){
         document.querySelector(".win").textContent = "'"+ b2 +"' wins!";
         document.querySelector(".win").style.display = "block";
+        document.querySelector(".res").style.display = "block";
         p2.style.color = "#f08080";
         p5.style.color = "#f08080";
         p8.style.color = "#f08080";
@@ -136,6 +141,7 @@ function isFinished(){
     else if(b4 == b5 && b4 == b6 && b4 !=""){
         document.querySelector(".win").textContent = "'"+ b4 +"' wins!";
         document.querySelector(".win").style.display = "block";
+        document.querySelector(".res").style.display = "block";
         p4.style.color = "#f08080";
         p5.style.color = "#f08080";
         p6.style.color = "#f08080";
@@ -143,6 +149,7 @@ function isFinished(){
     else if(b7 == b8 && b7 == b9 && b7 !=""){
         document.querySelector(".win").textContent = "'"+ b7 +"' wins!";
         document.querySelector(".win").style.display = "block";
+        document.querySelector(".res").style.display = "block";
         p7.style.color = "#f08080";
         p8.style.color = "#f08080";
         p9.style.color = "#f08080";
@@ -150,6 +157,7 @@ function isFinished(){
     else if(b7 == b5 && b7 == b3 && b7 !=""){
         document.querySelector(".win").textContent = "'"+ b7 +"' wins!";
         document.querySelector(".win").style.display = "block";
+        document.querySelector(".res").style.display = "block";
         p7.style.color = "#f08080";
         p5.style.color = "#f08080";
         p3.style.color = "#f08080";
@@ -157,6 +165,7 @@ function isFinished(){
     else if(b3 == b6 && b3 == b9 && b3 !=""){
         document.querySelector(".win").textContent = "'"+ b3 +"' wins!";
         document.querySelector(".win").style.display = "block";
+        document.querySelector(".res").style.display = "block";
         p3.style.color = "#f08080";
         p6.style.color = "#f08080";
         p9.style.color = "#f08080";
