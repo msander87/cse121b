@@ -57,6 +57,9 @@ div:nth-child(2), div:nth-child(5), div:nth-child(8){
     font-family: 'Mochiy Pop P One', sans-serif;
     display: none;
 }
+.res{
+    display: none;
+}
 
 .btn-container{
     text-align: center;
